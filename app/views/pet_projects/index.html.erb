@@ -1,0 +1,20 @@
+<h1 class="title">Pet Projects</h1>
+
+<div class="pet-projects">
+  <% @pet_projects.each do |pet_project| %>
+    <article class="pet-project">
+      <h2>Title: <%= pet_project.title %></h2>
+      <p>Description: <%= pet_project.description %></p>
+      <h3>Images:</h3>
+      <% pet_project.images.each do |image| %>
+        <div>
+          <img src="data:image/png;base64,<%= image %>" />
+        </div>
+      <% end %>
+      <h3>Links:</h3>
+      <div>Github: <a href="#"><%= pet_project.github %></a></div>
+      <div>Hosting: <a href="#"><%= pet_project.hosting %></a></div>
+      <%= link_to "Show", pet_project_path(pet_project), class: "button" %>
+    </article>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+<article class="pet-project">
+  <h2>Title: <%= @pet_project.title %></h2>
+  <p>Description: <%= @pet_project.description %></p>
+  <h3>Images:</h3>
+  <% @pet_project.images.each do |image| %>
+    <div>
+      <img src="data:image/png;base64,<%= image %>" />
+    </div>
+  <% end %>
+  <h3>Languages:</h3>
+  <% @pet_project.languages.each do |language| %>
+    <ul>
+      <li><%= language %></li>
+    </ul>
+  <% end %>
+  <h3>Libraries:</h3>
+  <% @pet_project.libraries.each do |library| %>
+    <ul>
+      <li><%= library %></li>
+    </ul>
+  <% end %>
+  <h3>Resources:</h3>
+  <% @pet_project.resources.each do |resource| %>
+    <ul>
+      <li><%= resource %></li>
+    </ul>
+  <% end %>
+  <h3>Links:</h3>
+  <div>Github: <a href="#"><%= @pet_project.github %></a></div>
+  <div>Hosting: <a href="#"><%= @pet_project.hosting %></a></div>
+</article>

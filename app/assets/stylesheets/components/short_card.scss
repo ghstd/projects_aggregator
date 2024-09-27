@@ -1,0 +1,49 @@
+.short_card {
+	max-width: 50%;
+	margin: 0 0 1rem 0;
+	padding: 1rem 0 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px dashed $moddle_theme_color_3;
+
+	&__title {
+		background-color: $moddle_theme_color_3;
+		text-align: center;
+		margin: 0 0 1rem 0;
+		border-top: 4px solid $moddle_theme_color_1;
+	}
+
+	&__description {
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 1.4rem;
+		margin: 0 0 1rem 0;
+		padding: 0 1rem;
+		border-left: 2px solid $moddle_theme_color_1;
+	}
+
+	&__image {
+		margin: 0 0 1rem 0;
+		align-self: center;
+	}
+
+	&__links {
+		margin: 0 0 1rem 0;
+		padding: 0 1rem;
+		border-left: 2px solid $moddle_theme_color_1;
+		font-size: 1.2rem;
+		font-weight: 700;
+
+		a {
+			font-weight: 400;
+		}
+
+		a:hover {
+			color: $moddle_theme_color_2;
+		}
+	}
+
+	&__button {
+		align-self: center;
+	}
+}

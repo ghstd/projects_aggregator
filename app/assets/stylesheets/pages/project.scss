@@ -1,0 +1,91 @@
+@mixin characteristics {
+	align-self: stretch;
+
+	h3 {
+		font-size: 1.4rem;
+		margin: 0 0 0.5rem 0;
+	}
+
+	ul {
+		margin: 0 0 1rem 0;
+		padding: 0 0 0 5rem;
+		font-size: 1.2rem;
+		font-weight: 500;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	li {
+		background-color: $moddle_theme_color_3;
+		padding: 0 0.5rem;
+		border-radius: 10px;
+	}
+}
+
+.project {
+	padding: 2rem 0 0 0;
+
+	&__button {
+		margin: 0 0 0 2rem;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		margin: 0 0 0.5rem 0;
+	}
+
+	&__body {
+		max-width: 50%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__description {
+		font-size: 1.2rem;
+		font-weight: 500;
+		margin: 0 0 1rem 0;
+	}
+
+	&__image {
+		margin: 0 0 1rem 0;
+	}
+
+	&__languages {
+		@include characteristics;
+	}
+
+	&__libraries {
+		@include characteristics;
+	}
+
+	&__resources {
+		@include characteristics;
+		margin: 0 0 2rem 0;
+	}
+
+	&__links_title {
+		font-size: 1.4rem;
+		margin: 0 0 0.5rem 0;
+	}
+
+	&__links {
+		margin: 0 0 1rem 0;
+		padding: 0 1rem;
+		border-left: 2px solid $moddle_theme_color_1;
+		font-size: 1.2rem;
+		font-weight: 700;
+
+		a {
+			font-weight: 400;
+		}
+
+		a:hover {
+			color: $moddle_theme_color_2;
+		}
+	}
+
+}

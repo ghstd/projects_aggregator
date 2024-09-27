@@ -1,5 +1,13 @@
+@import './reset';
 @import './variables';
-@import './menu';
-@import './pages';
-@import './pet_project';
+@import './global';
+@import './layouts/header';
+@import './pages/home';
+@import './pages/projects';
+@import './pages/project';
+@import './components/button';
+@import './components/menu_button';
+@import './components/theme_switcher';
+@import './components/lang_switcher';
+@import './components/short_card';
 

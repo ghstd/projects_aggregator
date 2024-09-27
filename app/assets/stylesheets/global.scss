@@ -1,0 +1,28 @@
+// @font-face {
+// 	font-family: 'sourcesanspro';
+// 	font-style: normal;
+// 	font-weight: bold;
+// 	font-display: block;
+// 	src: url(https://design.penpot.app/fonts/sourcesanspro-bold.woff) format('woff');
+// }
+// @font-face {
+// 	font-family: 'sourcesanspro';
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	font-display: block;
+// 	src: url(https://design.penpot.app/fonts/sourcesanspro-regular.woff) format('woff');
+// }
+
+body {
+	background-color: #787575;
+	font-family: "Source Sans 3", sans-serif;
+}
+
+.container {
+	min-height: 100vh;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0.5rem;
+	background-color: $moddle_theme_color_4;
+	border: 2px solid $moddle_theme_color_6;
+}

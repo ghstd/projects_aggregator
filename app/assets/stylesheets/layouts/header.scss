@@ -1,0 +1,36 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+	background-color: $moddle_theme_color_5;
+	border: 2px solid $moddle_theme_color_6;
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-size: 1.4rem;
+		font-weight: 700;
+
+		a:hover {
+			color: $moddle_theme_color_2;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+	}
+}
+
+.controls {
+	&__login {
+		font-size: 1.4rem;
+		font-weight: 700;
+		cursor: pointer;
+	}
+}
+
+
+

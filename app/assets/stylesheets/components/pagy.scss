@@ -1,0 +1,49 @@
+.pagy {
+	margin: 0 0 0 1.5rem;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+
+  // & > :not([hidden]) ~ :not([hidden]) {
+  //   --space-reverse: 0;
+  //   margin-right: calc(0.25rem * var(--space-reverse));
+  //   margin-left: calc(0.25rem * calc(1 - var(--space-reverse)));
+  // }
+
+  a:not(.gap) {
+		border: 1px solid #000000;
+		box-shadow: 2px 2px 0px 0px #000000;
+    display: block;
+    text-decoration: none;
+    background-color: $moddle_theme_color_3;
+    padding: 0.25rem 1.2rem;
+    color: inherit;
+    &:hover {
+      // background-color: rgb(209 213 219);
+      background-color: $moddle_theme_color_1;
+    }
+    &:not([href]) { /* disabled links */
+      cursor: default;
+      background-color: $moddle_theme_color_3;
+      color: rgb(209 213 219);
+    }
+    &.current {
+      background-color: $moddle_theme_color_5;
+      color: rgb(255 255 255);
+    }
+		&:active {
+			box-shadow: 1px 1px 0px 0px #000000;
+			transform: translateY(1px);
+		}
+  }
+
+	a[aria-label="Previous"] {
+		display: none;
+	}
+
+	a[aria-label="Next"] {
+		display: none;
+	}
+}

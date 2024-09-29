@@ -1,13 +1,63 @@
 .menu_button {
-	cursor: pointer;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 1.5rem;
+	position: relative;
 
-	span {
-		width: 2rem;
-		height: 0.25rem;
-		background-color: #000;
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: $moddle_theme_color_5;
+		height: 1.5rem;
+		border: none;
+		cursor: pointer;
+	
+		span {
+			width: 2rem;
+			height: 0.25rem;
+			background-color: #000;
+			transition: all 0.2s ease-in-out;
+		}
 	}
+
+	&__body {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		gap: 0.5rem;
+		top: calc(100% + 1rem);
+		left: -2rem;
+		padding: 0.5rem;
+		background-color: $moddle_theme_color_5;
+		border: 1px solid #000000;
+		font-size: 1.2rem;
+		font-weight: 600;
+		z-index: 2;
+
+		a {
+			white-space: nowrap;
+		}
+
+		a:hover {
+			color: $moddle_theme_color_1;
+		}
+	}
+
+	&--active &__title {
+		justify-content: space-around;
+
+		span:nth-child(2) {
+			display: none;
+		}
+
+		span {
+			transform: rotate(-10deg);
+			background-color: $moddle_theme_color_1;
+			border-radius: 5px;
+		}
+
+	}
+
+	&--active &__body {
+		display: flex;
+	}
+
 }

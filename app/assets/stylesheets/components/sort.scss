@@ -30,6 +30,12 @@
 		flex-direction: column;
 		gap: 0.5rem;
 		text-align: center;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 0.5rem;
+		background-color: $moddle_theme_color_3;
+		border: 1px solid #000000;
 
 		a {
 			color: #fff;
@@ -45,6 +51,8 @@
 
 		a.sort__link--active {
 			color: $moddle_theme_color_2;
+			cursor: default;
+			pointer-events: none;
 		}
 	}
 
@@ -59,11 +67,5 @@
 
 	&--active &__body {
 		display: flex;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		padding: 0.5rem;
-		background-color: $moddle_theme_color_3;
-		border: 1px solid #000000;
 	}
 }

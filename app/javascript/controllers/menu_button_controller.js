@@ -12,12 +12,12 @@ export default class extends Controller {
 
   show(event) {
 		// event.stopPropagation()
-		this.element.classList.toggle("sort--active")
+		this.element.classList.toggle("menu_button--active")
   }
 
 	hideOnClickOutside(event) {
     if (!this.element.contains(event.target)) {
-      this.element.classList.remove("sort--active")
+      this.element.classList.remove("menu_button--active")
     }
   }
 }

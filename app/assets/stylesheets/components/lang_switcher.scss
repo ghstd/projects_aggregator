@@ -1,7 +1,62 @@
 .lang_switcher {
-	padding: 0.2rem 0.5rem;
-	border: 1px solid $moddle_theme_color_6;
-	font-size: 0.8rem;
-	font-weight: 600;
-	cursor: pointer;
+	position: relative;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: $moddle_theme_color_5;
+		padding: 0.2rem 0.5rem;
+		border: 1px solid $moddle_theme_color_6;
+		box-shadow: 2px 2px 0px 0px #000000;
+		font-size: 0.8rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	&__body {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		gap: 0.5rem;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding: 0.5rem 0.3rem;
+		background-color: $moddle_theme_color_5;
+		border: 1px solid #000000;
+
+		& > div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.1rem 0.4rem;
+			background-color: $moddle_theme_color_3;
+			border-radius: 10px;
+			border: 1px solid $moddle_theme_color_6;
+			cursor: pointer;
+
+			svg {
+				width: 20px;
+				height: 13px;
+			}
+		}
+
+		& > div:hover {
+			background-color: $moddle_theme_color_1;
+		}
+	}
+
+	&--active &__title {
+		box-shadow: 1px 1px 0px 0px #000000;
+		transform: translateY(1px);
+
+		span {
+			color: #fff;
+		}
+	}
+
+	&--active &__body {
+		display: flex;
+	}
 }

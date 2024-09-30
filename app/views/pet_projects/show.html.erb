@@ -1,3 +1,5 @@
+<% provide :current_page_tab_title, current_page_tab_title(@pet_project.title) %>
+
 <article class="project">
   <%= link_to "Back", pet_projects_path, class: "project__button button" %>
   <h2 class="project__title"><%= @pet_project.title %></h2>

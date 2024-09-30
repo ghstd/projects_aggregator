@@ -15,6 +15,10 @@
 		a:hover {
 			color: $moddle_theme_color_2;
 		}
+
+		a.navigation__link--active {
+			color: $moddle_theme_color_1;
+		}
 	}
 
 	&__controls {

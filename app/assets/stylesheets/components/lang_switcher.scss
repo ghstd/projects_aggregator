@@ -12,6 +12,12 @@
 		font-size: 0.8rem;
 		font-weight: 600;
 		cursor: pointer;
+
+		&:hover {
+			span {
+				color: #fff;
+			}
+		}
 	}
 
 	&__body {
@@ -26,7 +32,7 @@
 		background-color: $moddle_theme_color_5;
 		border: 1px solid #000000;
 
-		& > div {
+		a {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -42,7 +48,7 @@
 			}
 		}
 
-		& > div:hover {
+		a:hover {
 			background-color: $moddle_theme_color_1;
 		}
 	}

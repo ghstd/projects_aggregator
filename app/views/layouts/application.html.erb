@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectsAggregator</title>
+    <title><%= yield :current_page_tab_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <!-- <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> -->
-    <!-- <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %> -->
-    <%= stylesheet_link_tag "application", 'data-turbo': 'false' %>
-    <%= javascript_include_tag "application", 'data-turbo': 'false' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,4 +1,5 @@
-<%= render "shared/header" %>
+<% provide :current_page_tab_title, current_page_tab_title('Projects') %>
+<%= render partial: "shared/header", locals: { current_page: 'Projects' } %>
 
 <main class="projects">
   <div class="projects__body">
@@ -14,7 +15,7 @@
         </button>
         <div class="sort__body">
           <% ["new", "old", "game"].each do |sort_param| %>
-            <%= link_to sort_param, pet_projects_path(sort: sort_param, page: @pagy.page), class: "#{params[:sort] == sort_param ? "sort__link--active" : ""}" %>
+            <%= link_to sort_param, pet_projects_path(sort: sort_param, page: @pagy.page), class: sort_item_class(sort_param) %>
           <% end %>
         </div>
       </div>

@@ -2,8 +2,8 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 1.5rem;
-	background-color: $moddle_theme_color_5;
-	border: 2px solid $moddle_theme_color_6;
+	background-color: var(--theme_color_6);
+	border: 2px solid var(--theme_color_7);
 
 	&__navigation {
 		display: flex;
@@ -13,11 +13,11 @@
 		font-weight: 700;
 
 		a:hover {
-			color: $moddle_theme_color_2;
+			color: var(--theme_color_3);
 		}
 
 		a.navigation__link--active {
-			color: $moddle_theme_color_1;
+			color: var(--theme_color_2);
 		}
 	}
 

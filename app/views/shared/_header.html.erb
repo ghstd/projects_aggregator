@@ -7,30 +7,10 @@
 
   <ul class="header__controls">
     <li class="theme_switcher" data-controller="theme">
-      <span class="theme_switcher__pointer" data-theme-target="themePointer"></span>
-      <span class="theme_switcher__button" data-action="click->theme#switchTheme" data-theme="light">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      </span>
-      <span class="theme_switcher__button" data-action="click->theme#switchTheme" data-theme="middle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-      </span>
-      <span class="theme_switcher__button" data-action="click->theme#switchTheme" data-theme="dark">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </span>
+      <%= render "components/theme/theme_switcher" %>
     </li>
     <li class="lang_switcher" data-controller="lang">
-      <button class="lang_switcher__title" data-action="lang#show">
-        <span>Lang</span>
-        <%= render "partials/#{I18n.locale}_flag" %>
-      </button>
-      <div class="lang_switcher__body">
-        <% I18n.available_locales.each do |locale| %>
-          <a href=<%= current_url_whith_locale(locale) %>>
-            <span><%= locale %></span>
-            <%= render "partials/#{locale}_flag" %>
-          </a>
-        <% end %>
-      </div>
+      <%= render "components/lang/lang_switcher" %>
     </li>
     <li class="controls__login">Log In</li>
     <li class="menu_button" data-controller="menuButton">

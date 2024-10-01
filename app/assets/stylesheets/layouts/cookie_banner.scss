@@ -1,0 +1,41 @@
+.cookie_banner {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: var(--theme_color_4);
+	border: 1px solid var(--theme_color_7);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	width: 24vw;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		button {
+			background-color: var(--theme_color_4);
+			border: 1px solid var(--theme_color_7);
+			box-shadow: 2px 2px 0px 0px var(--theme_color_7);
+			padding: 0.4rem 0.8rem;
+			cursor: pointer;
+		}
+
+		button:active {
+			box-shadow: 1px 1px 0px 0px var(--theme_color_7);
+			transform: translateY(2px);
+		}
+	}
+
+	a {
+		color: var(--theme_color_5);
+		font-size: 1.1rem;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		color: var(--theme_color_1);
+	}
+}

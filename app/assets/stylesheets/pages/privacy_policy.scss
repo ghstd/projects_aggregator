@@ -1,0 +1,35 @@
+.privacy_policy {
+	padding: 2rem 0 0 0;
+
+	&__button {
+		margin: 0 0 0 2rem;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		margin: 0 0 0.5rem 0;
+	}
+
+	&__body {
+		max-width: 70%;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		font-weight: 500;
+
+		h2 {
+			margin: 0 0 0.2rem 0;
+		}
+
+		p {
+			margin: 0 0 0.7rem 0;
+			padding: 0 0 0 2rem;
+		}
+
+		ul {
+			padding: 0 0 0 2rem;
+			list-style: disc;
+		}
+	}
+}
+

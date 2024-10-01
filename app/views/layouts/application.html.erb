@@ -13,9 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
   </head>
 
-  <body data-turbo="false">
+  <body data-turbo="false" data-theme=<%= get_theme_from_cookie %>>
     <div class="container">
       <%= yield %>
+			<%= render "partials/cookie_banner" if !cookies[:cookies_accepted] %>
     </div>
   </body>
 </html>

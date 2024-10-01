@@ -1,0 +1,8 @@
+<span class="theme_switcher__pointer theme_switcher__pointer--<%= get_theme_from_cookie %>" data-theme-target="themePointer"></span>
+<% ['light', 'middle', 'dark'].each do |theme| %>
+  <span class="theme_switcher__button <%= theme == get_theme_from_cookie ? 'theme_switcher__button--active' : '' %>" 
+		data-action="click->theme#switchTheme" 
+    data-switch_theme="<%= theme %>">
+    <%= render "components/theme/#{theme}_theme" %>
+  </span>
+<% end %>

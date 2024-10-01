@@ -40,4 +40,22 @@ module ApplicationHelper
   def current_url_whith_locale(locale)
     url_for(request.query_parameters.merge(locale: locale))
   end
+
+  def get_theme_from_cookie
+    current_theme = cookies[:theme]
+    default_theme = 'light'
+    if current_theme.present?
+      current_theme
+    else
+      default_theme
+    end
+  end
+
+  def previous_page_url
+    if request.referer.present? && request.referer.start_with?(request.base_url)
+      request.referer
+    else
+      root_path
+    end
+  end
 end

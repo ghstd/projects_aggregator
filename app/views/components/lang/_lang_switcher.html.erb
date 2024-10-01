@@ -1,0 +1,12 @@
+<button class="lang_switcher__title" data-action="lang#show">
+  <span>Lang</span>
+  <%= render "components/lang/#{I18n.locale}_flag" %>
+</button>
+<div class="lang_switcher__body">
+  <% I18n.available_locales.each do |locale| %>
+    <a href=<%= current_url_whith_locale(locale) %>>
+			<span><%= locale %></span>
+      <%= render "components/lang/#{locale}_flag" %>
+    </a>
+  <% end %>
+</div>

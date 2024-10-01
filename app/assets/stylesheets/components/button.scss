@@ -2,13 +2,14 @@
 	display: inline-block;
 	padding: 0.5rem 2.5rem;
 	transform: rotate(2deg);
-  background: #146152;
+  background: var(--theme_color_6);
 	text-decoration: none;
 	cursor: pointer;
 	font-weight: 700;
 	font-size: 1.5rem;
-  border: 2px solid #000000;
-  box-shadow: 3px 4px 0px 0px #000000;
+  border: 2px solid var(--theme_color_7);
+  box-shadow: 3px 4px 0px 0px var(--theme_color_7);
+	transition: all 0.2s ease-in-out;
 }
 
 .button:hover {
@@ -16,6 +17,6 @@
 }
 
 .button:active {
-	box-shadow: 1px 2px 0px 0px #000000;
+	box-shadow: 1px 2px 0px 0px var(--theme_color_7);
 	transform: translateY(2px);
 }

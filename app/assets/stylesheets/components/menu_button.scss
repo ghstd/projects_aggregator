@@ -5,7 +5,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		background-color: $moddle_theme_color_5;
+		background-color: var(--theme_color_6);
 		height: 1.5rem;
 		border: none;
 		cursor: pointer;
@@ -13,7 +13,7 @@
 		span {
 			width: 2rem;
 			height: 0.25rem;
-			background-color: #000;
+			background-color: var(--theme_color_7);
 			transition: all 0.2s ease-in-out;
 		}
 	}
@@ -26,8 +26,8 @@
 		top: calc(100% + 1rem);
 		left: -2rem;
 		padding: 0.7rem;
-		background-color: $moddle_theme_color_5;
-		border: 1px solid #000000;
+		background-color: var(--theme_color_6);
+		border: 1px solid var(--theme_color_7);
 		font-size: 1.2rem;
 		font-weight: 600;
 		z-index: 2;
@@ -37,7 +37,7 @@
 		}
 
 		a:hover {
-			color: $moddle_theme_color_1;
+			color: var(--theme_color_2);
 		}
 	}
 
@@ -49,7 +49,7 @@
 		}
 
 		span {
-			background-color: $moddle_theme_color_1;
+			background-color: var(--theme_color_2);
 			border-radius: 5px;
 		}
 

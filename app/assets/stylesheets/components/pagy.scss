@@ -4,7 +4,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--theme_color_7);
 
   // & > :not([hidden]) ~ :not([hidden]) {
   //   --space-reverse: 0;
@@ -13,28 +13,27 @@
   // }
 
   a:not(.gap) {
-		border: 1px solid #000000;
-		box-shadow: 2px 2px 0px 0px #000000;
+		border: 1px solid var(--theme_color_7);
+		box-shadow: 2px 2px 0px 0px var(--theme_color_7);
     display: block;
     text-decoration: none;
-    background-color: $moddle_theme_color_3;
+    background-color: var(--theme_color_4);
     padding: 0.25rem 1.2rem;
     color: inherit;
     &:hover {
-      // background-color: rgb(209 213 219);
-      background-color: $moddle_theme_color_1;
+      background-color: var(--theme_color_2);
     }
     &:not([href]) { /* disabled links */
       cursor: default;
-      background-color: $moddle_theme_color_3;
-      color: rgb(209 213 219);
+      background-color: var(--theme_color_4);
+      color: var(--theme_color_1);
     }
     &.current {
-      background-color: $moddle_theme_color_5;
-      color: rgb(255 255 255);
+      background-color: var(--theme_color_6);
+      color: var(--theme_color_1);
     }
 		&:active {
-			box-shadow: 1px 1px 0px 0px #000000;
+			box-shadow: 1px 1px 0px 0px var(--theme_color_7);
 			transform: translateY(1px);
 		}
   }

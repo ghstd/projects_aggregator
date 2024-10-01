@@ -9,9 +9,11 @@ import SortController from "./sort_controller"
 import ThemeController from "./theme_controller"
 import LangController from "./lang_controller"
 import MenuButtonController from "./menu_button_controller"
+import CookieBannerController from "./cookie_banner_controller"
 
 application.register("hello", HelloController)
 application.register("sort", SortController)
 application.register("theme", ThemeController)
 application.register("lang", LangController)
 application.register("menuButton", MenuButtonController)
+application.register("cookieBanner", CookieBannerController)

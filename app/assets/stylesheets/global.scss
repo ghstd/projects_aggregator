@@ -14,7 +14,8 @@
 // }
 
 body {
-	background-color: #787575;
+	position: relative;
+	background-color: $background_main_color;
 	font-family: "Source Sans 3", sans-serif;
 }
 
@@ -23,6 +24,6 @@ body {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0.5rem;
-	background-color: $moddle_theme_color_4;
-	border: 2px solid $moddle_theme_color_6;
+	background-color: var(--theme_color_5);
+	border: 2px solid var(--theme_color_7);
 }

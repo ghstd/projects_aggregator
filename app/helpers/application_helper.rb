@@ -43,7 +43,7 @@ module ApplicationHelper
 
   def get_theme_from_cookie
     current_theme = cookies[:theme]
-    default_theme = 'light'
+    default_theme = 'dark'
     if current_theme.present?
       current_theme
     else

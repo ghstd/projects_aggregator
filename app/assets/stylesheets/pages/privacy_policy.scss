@@ -1,5 +1,6 @@
 .privacy_policy {
 	padding: 2rem 0 0 0;
+	background-color: var(--privacy_policy_background_color);
 
 	&__button {
 		margin: 0 0 0 2rem;
@@ -8,7 +9,9 @@
 	&__title {
 		text-align: center;
 		font-size: 3rem;
-		margin: 0 0 0.5rem 0;
+		border-bottom: 2px solid var(--theme_color_7);
+    max-width: 50%;
+    margin: 0 auto 1rem;
 	}
 
 	&__body {

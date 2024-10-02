@@ -4,6 +4,8 @@
 	padding: 1rem 1.5rem;
 	background-color: var(--theme_color_6);
 	border: 2px solid var(--theme_color_7);
+	box-shadow: 4px 4px 10px 0px var(--theme_color_7);
+	color: var(--header_color);
 
 	&__navigation {
 		display: flex;

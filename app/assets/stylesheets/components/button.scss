@@ -7,9 +7,10 @@
 	cursor: pointer;
 	font-weight: 700;
 	font-size: 1.5rem;
+	background-color: var(--button_background_color);
   border: 2px solid var(--theme_color_7);
   box-shadow: 3px 4px 0px 0px var(--theme_color_7);
-	transition: all 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
 }
 
 .button:hover {

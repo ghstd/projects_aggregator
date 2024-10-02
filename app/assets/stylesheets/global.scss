@@ -13,9 +13,15 @@
 // 	src: url(https://design.penpot.app/fonts/sourcesanspro-regular.woff) format('woff');
 // }
 
+a, button, span, div, svg {
+	transition: color 0.2s ease, background-color 0.2s ease;
+}
+
 body {
 	position: relative;
-	background-color: $background_main_color;
+	background-image: var(--background-image);
+	background-attachment: fixed;
+  background-size: cover;
 	font-family: "Source Sans 3", sans-serif;
 }
 

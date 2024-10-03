@@ -1,0 +1,9 @@
+<% provide :current_page_tab_title, current_page_tab_title('Comments') %>
+<%= render partial: "shared/header", locals: { current_page: 'Comments' } %>
+
+
+<h1>Comments</h1>
+<p>This comments can see only you and author of this website</p>
+<%= link_to "Create", new_comment_path, class: "button" %>
+
+<div>todo: show all comments here</div>

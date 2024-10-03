@@ -18,6 +18,8 @@ $dark_color: #000;
 	--header_background_color: var(--theme_color_6);
 	--button_background_color: var(--theme_color_6);
 	--menu__button_background_color: var(--theme_color_7);
+
+	--text_color: var(--theme_color_7);
 }
 
 [data-theme="middle"] {
@@ -35,6 +37,8 @@ $dark_color: #000;
 	--header_background_color: var(--theme_color_6);
 	--button_background_color: var(--theme_color_6);
 	--menu__button_background_color: var(--theme_color_7);
+
+	--text_color: var(--theme_color_7);
 }
 
 [data-theme="dark"] {
@@ -52,6 +56,8 @@ $dark_color: #000;
 	--header_background_color: var(--theme_color_4);
 	--button_background_color: var(--theme_color_4);
 	--menu__button_background_color: var(--theme_color_4);
+
+	--text_color: #bdddce;
 }
 
 

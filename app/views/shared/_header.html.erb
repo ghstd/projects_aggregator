@@ -2,7 +2,8 @@
   <nav class="header__navigation">
     <%= nav_link "Home", root_path, current_page: current_page %>
     <%= nav_link "Projects", pet_projects_path, current_page: current_page %>
-    <%= nav_link "About", page_about_path, current_page: current_page %>
+    <%= nav_link "About", pages_about_path, current_page: current_page %>
+    <%= nav_link "Comments", comments_path, current_page: current_page %>
   </nav>
 
   <ul class="header__controls">
@@ -12,7 +13,7 @@
     <li class="lang_switcher" data-controller="lang">
       <%= render "components/lang/lang_switcher" %>
     </li>
-    <li class="controls__login">Log In</li>
+    <li class="controls__login"><%= link_to "Log In", new_user_session_path %></li>
     <li class="menu_button" data-controller="menuButton">
       <button class="menu_button__title" data-action="menuButton#show">
         <span></span>

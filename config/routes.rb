@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get 'pages/about', to: 'pages#about'
     get 'pages/privacy_policy', to: 'pages#privacy_policy'
 
-    devise_for :users, skip: :omniauth_callbacks
+    devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: 'users/registrations' }
 
     resources :pet_projects
     resources :comments

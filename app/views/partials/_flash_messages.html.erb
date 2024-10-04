@@ -1,0 +1,12 @@
+<% if flash.any? %>
+  <div class="flash_messages" data-controller="notificationsErrors">
+    <ul>
+      <% flash.each do |key, message| %>
+        <li class="flash_messages__<%= key %>">
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+    <button type="button" data-action="notificationsErrors#close">&times;</button>
+  </div>
+<% end %>

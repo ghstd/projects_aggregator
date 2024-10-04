@@ -1,0 +1,42 @@
+.flash_messages {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 20%;
+	background-color: var(--theme_color_5);
+	color: $light_color;
+	font-size: 1.2rem;
+	text-align: start;
+	display: flex;
+	border-radius: 5px;
+
+	li {
+		margin: 0.2rem;
+		padding: 0.2rem 0.4rem;
+		border-radius: 5px;
+	}
+
+	&__notice {
+		background-color: $notice_color;
+	}
+
+	&__alert {
+		background-color: $alert_color;
+	}
+
+	button {
+		align-self: flex-start;
+		color: $light_color;
+		background-color: var(--theme_color_5);
+		border: 1px solid var(--theme_color_7);
+		box-shadow: 2px 2px 0px 0px var(--theme_color_7);
+		padding: 0rem 0.8rem;
+		margin: 0.2rem;
+		cursor: pointer;
+	}
+
+	button:active {
+		box-shadow: 1px 1px 0px 0px var(--theme_color_7);
+		transform: translateY(2px);
+	}
+}

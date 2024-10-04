@@ -16,8 +16,8 @@
   <body data-turbo="false" data-theme=<%= get_theme_from_cookie %>>
     <div class="container">
 			<%= yield %>
+			<%= render "partials/flash_messages" %>
 			<%= render "partials/cookie_banner" if !cookies[:cookies_accepted] %>
-			<%= render "partials/devise_notice_alert" %>
 		</div>
   </body>
 </html>

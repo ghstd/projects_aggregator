@@ -26,7 +26,7 @@
       </button>
       <div data-turbo="true" class="menu_button__body">
         <% if user_signed_in? %>
-          <%= link_to "Profile", edit_user_registration_path %>
+          <%= link_to "Profile", pages_profile_path %>
           <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete} %>
         <% else %>
           <%= link_to "Log In", new_user_session_path %>

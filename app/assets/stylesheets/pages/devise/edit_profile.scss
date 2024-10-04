@@ -1,0 +1,42 @@
+.edit_profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 2rem 0 0 0;
+	max-width: 80%;
+	margin: 0 auto;
+
+	&__button {
+		align-self: flex-start;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2.5rem;
+		background-color: var(--theme_color_4);
+		border-bottom: 2px solid var(--theme_color_2);
+		padding: 0 2rem;
+	}
+
+	&__form {
+		margin: 0 0 1rem 0;
+		padding: 0 0 2rem 0;
+		border-bottom: 2px solid var(--theme_color_2);
+
+		h3 {
+			margin: 3rem 0 0 0;
+		}
+
+		h4 {
+			line-height: 0.8;
+		}
+	}
+
+	&__delete {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		color: var(--theme_color_1);
+	}
+}

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
     get 'pages/about', to: 'pages#about'
     get 'pages/privacy_policy', to: 'pages#privacy_policy'
+    get 'pages/profile', to: 'pages#profile'
 
     devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: 'users/registrations' }
 

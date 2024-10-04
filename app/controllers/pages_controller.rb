@@ -10,4 +10,13 @@ class PagesController < ApplicationController
   def privacy_policy
 
   end
+
+  def profile
+    resource = current_user
+    resource_name = :user
+
+    @only_demonstration = true
+
+    render "devise/registrations/edit", locals: {resource: resource, resource_name: resource_name}
+  end
 end

@@ -14,9 +14,12 @@
       <%= render "components/lang/lang_switcher" %>
     </li>
     <% if user_signed_in? %>
-      <li class="controls__login">Hi, User</li>
+      <li class="header_login">
+        <span><%= current_user.name_or_email %></span>
+        <%= gravatar(current_user) %>
+      </li>
     <% else %>
-      <li class="controls__login"><%= link_to "Log In", new_user_session_path %></li>
+      <li class="header_login"><%= link_to "Log In", new_user_session_path %></li>
     <% end %>
     <li class="menu_button" data-controller="menuButton">
       <button class="menu_button__title" data-action="menuButton#show">

@@ -58,4 +58,12 @@ module ApplicationHelper
       root_path
     end
   end
+
+  def gravatar(obj, css_class = '', size = 30)
+
+    params = URI.encode_www_form('s' => size)
+    src = "https://www.gravatar.com/avatar/#{obj.gravatar_hash}?#{params}"
+
+    image_tag src, class: css_class, alt: "gravatar image"
+  end
 end

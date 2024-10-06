@@ -15,10 +15,10 @@ class PetProjectsController < ApplicationController
 
   def sort_type
     case params[:sort]
-    when "new" then :asc
-    when "old" then :desc
-    when "game" then :desc
-    else :asc
+      when "new" then :asc
+      when "old" then :desc
+      when "game" then :desc
+      else :asc
     end
   end
 end

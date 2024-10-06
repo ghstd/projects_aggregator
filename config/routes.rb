@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: 'users/registrations' }
 
-    resources :pet_projects
+    resources :pet_projects, only: [:index, :show]
     resources :comments
   end
 end

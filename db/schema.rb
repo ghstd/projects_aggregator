@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_03_151757) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_06_125012) do
   create_table "pet_projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -39,8 +39,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_03_151757) do
     t.string "provider"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gravatar_hash"
+    t.integer "role", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role"], name: "index_users_on_role"
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 

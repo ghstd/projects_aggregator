@@ -13,6 +13,10 @@ class PagesController < ApplicationController
 
   end
 
+  def comments_demonstration
+
+  end
+
   def profile
     resource = current_user
     resource_name = :user

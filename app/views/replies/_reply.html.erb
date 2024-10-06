@@ -1,0 +1,9 @@
+<div>
+  <h3><%= reply.user.name_or_email %></h3>
+  <%= gravatar(reply.user) %>
+</div>
+<p><%= reply.text %></p>
+<div data-turbo="true">
+  <%= link_to "Edit", edit_reply_path(reply), class: "button_small" %>
+  <%= link_to "Delete", reply_path(reply), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_small" %>
+</div>

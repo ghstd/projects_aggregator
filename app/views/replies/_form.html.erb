@@ -1,0 +1,7 @@
+<%= form_with model: [comment, reply] do |f| %>
+  <%= render 'shared/errors', object: reply %>
+
+  <%= f.label :text, "Your reply" %>
+  <%= f.text_area :text, autofocus: true %>
+  <%= f.submit "Save" %>
+<% end %>

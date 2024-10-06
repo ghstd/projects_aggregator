@@ -1,0 +1,19 @@
+<div>
+  <h2><%= comment.user.name_or_email %></h2>
+  <%= gravatar(comment.user) %>
+</div>
+<p><%= comment.text %></p>
+<div data-turbo="true">
+  <%= link_to "Edit", edit_comment_path(comment), class: "button_small" %>
+  <%= link_to "Delete", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_small" %>
+</div>
+<ul>
+  <% comment.replies.each do |reply| %>
+    <li>
+      <%= render "replies/reply", reply: reply %>
+    </li>
+  <% end %>
+</ul>
+<div>
+  <%= render "replies/form", comment: comment, reply: @reply %>
+</div>

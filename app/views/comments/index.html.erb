@@ -2,8 +2,14 @@
 <%= render partial: "shared/header", locals: { current_page: 'Comments' } %>
 
 
-<h1>Comments</h1>
-<p>This comments can see only you and author of this website</p>
-<%= link_to "Create", new_comment_path, class: "button" %>
-
-<div>todo: show all comments here</div>
+<main>
+  <h1>Comments</h1>
+  <p>This comments can see only you and author of this website</p>
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><%= render comment %></li>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to "Create", new_comment_path, class: "button" %>
+</main>

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_06_125012) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_06_192927) do
+  create_table "comments", force: :cascade do |t|
+    t.text "text"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "pet_projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -26,6 +34,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_06_125012) do
     t.datetime "updated_at", null: false
     t.index ["age"], name: "index_pet_projects_on_age", unique: true
     t.index ["is_game"], name: "index_pet_projects_on_is_game"
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.text "text"
+    t.integer "user_id", null: false
+    t.integer "comment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_replies_on_comment_id"
+    t.index ["user_id"], name: "index_replies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +65,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_06_125012) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "replies", "comments"
+  add_foreign_key "replies", "users"
 end

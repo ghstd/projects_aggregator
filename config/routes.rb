@@ -7,10 +7,13 @@ Rails.application.routes.draw do
     get 'pages/about', to: 'pages#about'
     get 'pages/privacy_policy', to: 'pages#privacy_policy'
     get 'pages/profile', to: 'pages#profile'
+    get 'pages/comments_demonstration', to: 'pages#comments_demonstration'
 
     devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: 'users/registrations' }
 
     resources :pet_projects, only: [:index, :show]
-    resources :comments
+    resources :comments, except: [:show] do
+      resources :replies, except: [:show]
+    end
   end
 end

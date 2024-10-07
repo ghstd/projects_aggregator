@@ -1,7 +1,6 @@
 <%= form_with model: comment do |f| %>
   <%= render 'shared/errors', object: comment %>
 
-  <%= f.label :text, "Your comment" %>
   <%= f.text_area :text, autofocus: true %>
-  <%= f.submit "Save" %>
+  <%= f.submit "Save", class: "button_small" %>
 <% end %>

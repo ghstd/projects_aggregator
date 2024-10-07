@@ -1,0 +1,58 @@
+.replies {
+	margin: 0 0 0 2rem;
+	padding: 0 0 0 2rem;
+	border-left: 2px solid var(--theme_color_2);
+
+	&__button {
+		margin: 0 0 1rem 0;
+		display: flex !important;
+		align-items: center;
+		gap: 0.5rem;
+
+		svg {
+			fill: var(--theme_color_7);
+			stroke: var(--theme_color_7);
+			width: 1rem;
+			height: 1rem;
+			transition: transform 0.2s ease-in-out;
+		}
+
+		&:hover {
+			background-color: var(--theme_color_3);
+		}
+
+		&--active svg {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__form {
+		display: none;
+
+		form {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		textarea {
+			flex-grow: 1;
+			height: 4.8rem;
+			box-shadow: inset 0 2px 2px var(--theme_color_7);
+			border-radius: 5px;
+			padding: 0.5rem 0.8rem;
+			font-size: 1.2rem;
+			font-weight: 600;
+			outline: none;
+		}
+
+		input[type="submit"]:hover {
+			background-color: var(--theme_color_3);
+		}
+
+		&--active {
+			display: block;
+		}
+	}
+
+}

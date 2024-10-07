@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
   after_action :verify_authorized
 
   def index
-    @comments = current_user.comments
-    @reply = Reply.new
+    @comments = current_user.comments.includes(:replies)
   end
 
   def new
@@ -24,7 +23,6 @@ class CommentsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -49,7 +47,7 @@ class CommentsController < ApplicationController
   end
 
   def set_comment!
-    @comment = current_user.comments.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def authorize_comment!

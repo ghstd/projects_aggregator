@@ -4,25 +4,26 @@
 	text-align: center;
 
 	&__errors {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 20%;
 		background-color: $error_background_color;
 		color: $light_color;
 		border-radius: 5px;
-		padding: 0.5rem 0 0.5rem 0.5rem;
+		padding: 0.5rem;
 		font-size: 1.2rem;
 		text-align: start;
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		gap: 0.5rem;
 
 		ul {
-			list-style-type: disc;
+			list-style: disc;
+			padding: 0 0 0 1.5rem;
 		}
 
 		button {
+			align-self: flex-start;
 			background-color: $error_color;
 			border: 1px solid var(--theme_color_7);
 			box-shadow: 2px 2px 0px 0px var(--theme_color_7);

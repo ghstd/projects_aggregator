@@ -1,15 +1,17 @@
 <% provide :current_page_tab_title, current_page_tab_title('Comments') %>
 <%= render partial: "shared/header", locals: { current_page: 'Comments' } %>
 
-
-<main>
-  <h1>Comments</h1>
-  <p>This comments can see only you and author of this website</p>
-  <ul>
-    <% @comments.each do |comment| %>
-      <li><%= render comment %></li>
-    <% end %>
-  </ul>
-  <br>
-  <%= link_to "Create", new_comment_path, class: "button" %>
+<main class="comments">
+  <div class="comments__title">
+    <h1>Comments</h1>
+    <p>(Your comments will only be visible to you and the author of the website.)</p>
+  </div>
+  <div class="comments__body">
+    <%= link_to "Create comment", new_comment_path, class: "comments__button button" %>
+    <ul class="comments__list">
+      <% @comments.each do |comment| %>
+        <li class="comment"><%= render comment %></li>
+      <% end %>
+    </ul>
+  </div>
 </main>

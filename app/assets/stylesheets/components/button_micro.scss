@@ -1,0 +1,19 @@
+.button_micro {
+	display: inline-block;
+	padding: 0.2rem 0.7rem;
+  background: var(--theme_color_6);
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1rem;
+	background-color: var(--button_background_color);
+  border: 1px solid var(--theme_color_7);
+  box-shadow: 2px 2px 0px 0px var(--theme_color_7);
+	transition: transform 0.2s ease-in-out;
+
+	&:active {
+		box-shadow: 1px 1px 0px 0px var(--theme_color_7);
+		transform: translateY(1px);
+	}
+}
+

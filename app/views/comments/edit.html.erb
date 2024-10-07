@@ -1,4 +1,7 @@
-<h1>Edit comment</h1>
-<%= link_to "Back", comments_path, class: "button" %>
-
-<%= render "form", comment: @comment %>
+<main class="comment_edit">
+  <%= link_to "Back", comments_path, class: "button comment_edit__button" %>
+  <h1 class="comment_edit__title">Edit comment</h1>
+  <div class="comment_edit__body">
+    <%= render "form", comment: @comment %>
+  </div>
+</main>

@@ -1,19 +1,37 @@
-<div>
+<div class="comment__title">
+  <%= gravatar(comment.user, '', 25) %>
   <h2><%= comment.user.name_or_email %></h2>
-  <%= gravatar(comment.user) %>
 </div>
-<p><%= comment.text %></p>
-<div data-turbo="true">
-  <%= link_to "Edit", edit_comment_path(comment), class: "button_small" %>
-  <%= link_to "Delete", comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_small" %>
+<div class="comment__body">
+  <div class="comment__text"><%= simple_format(comment.text) %></div>
+  <div class="comment__links" data-turbo="true">
+    <%= link_to edit_comment_path(comment), class: "button_micro" do %>
+      <%= render "components/comments/edit_button" %>
+    <% end %>
+    <%= link_to comment_path(comment), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "button_micro" do %>
+      <%= render "components/comments/delete_button" %>
+    <% end %>
+  </div>
 </div>
-<ul>
-  <% comment.replies.each do |reply| %>
-    <li>
-      <%= render "replies/reply", reply: reply %>
-    </li>
-  <% end %>
-</ul>
-<div>
-  <%= render "replies/form", comment: comment, reply: @reply %>
+
+
+<div class="replies" data-controller="replies">
+  <ul>
+    <% comment.replies.each do |reply| %>
+      <li class="reply">
+        <%= render "replies/reply", comment: comment, reply: reply %>
+      </li>
+    <% end %>
+  </ul>
+
+  <button class="replies__button button_small" data-action="replies#show">
+    <span>Add reply</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+    </svg>
+  </button>
+
+  <div class="replies__form" data-replies-target="form">
+    <%= render "replies/form", comment: comment, reply: comment.replies.build %>
+  </div>
 </div>

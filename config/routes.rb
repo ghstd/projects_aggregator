@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
     resources :pet_projects, only: [:index, :show]
     resources :comments, except: [:show] do
-      resources :replies, except: [:show]
+      resources :replies, except: [:index, :new, :show]
     end
   end
 end

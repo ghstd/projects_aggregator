@@ -1,0 +1,40 @@
+.comment_new {
+	padding: 2rem 0 0 0;
+
+	&__button {
+		margin: 0 0 1rem 2rem;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		margin: 0 0 1.5rem 0;
+		color: var(--text_color);
+	}
+
+	&__body {
+		max-width: 70%;
+		margin: 0 auto;
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			width: 100%;
+		}
+
+		textarea {
+			height: 25vh;
+			box-shadow: inset 0 2px 2px var(--theme_color_7);
+			border-radius: 5px;
+			padding: 0.5rem 0.8rem;
+			font-size: 1.4rem;
+			font-weight: 700;
+			outline: none;
+		}
+
+		input[type="submit"] {
+			align-self: center;
+		}
+	}
+}

@@ -3,10 +3,15 @@
     <%= nav_link "Home", root_path, current_page: current_page %>
     <%= nav_link "Projects", pet_projects_path, current_page: current_page %>
     <%= nav_link "About", pages_about_path, current_page: current_page %>
+
     <% if user_signed_in? %>
       <%= nav_link "Comments", comments_path, current_page: current_page %>
     <% else %>
       <%= nav_link "Comments", pages_comments_demonstration_path, current_page: current_page %>
+    <% end %>
+
+    <% if user_signed_in? && current_user.admin? %>
+      <%= nav_link "Admin", admin_index_path, current_page: current_page %>
     <% end %>
   </nav>
 

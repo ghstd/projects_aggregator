@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :replies, dependent: :destroy
+  has_one :request_logger, dependent: :destroy
 
   enum role: { user: 0, admin: 1 }
 

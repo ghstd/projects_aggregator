@@ -6,7 +6,6 @@
 	background-color: $error_background_color;
 	color: $light_color;
 	border-radius: 5px;
-	padding: 0.5rem;
 	font-size: 1.2rem;
 	text-align: start;
 	display: flex;
@@ -14,7 +13,7 @@
 
 	ul {
 		list-style: disc;
-		padding: 0 0 0 1.5rem;
+		padding: 0.5rem 0.5rem 0.5rem 2rem;
 	}
 
 	button {
@@ -23,6 +22,7 @@
 		border: 1px solid var(--theme_color_7);
 		box-shadow: 2px 2px 0px 0px var(--theme_color_7);
 		padding: 0rem 0.8rem;
+		margin: 0.5rem 0.5rem 0 0;
 		cursor: pointer;
 	}
 

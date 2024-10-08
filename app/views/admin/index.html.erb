@@ -1,0 +1,42 @@
+<% provide :current_page_tab_title, current_page_tab_title('Admin') %>
+<%= render partial: "shared/header", locals: { current_page: 'Admin' } %>
+
+<main class="admin_users" data-turbo="true">
+  <ul class="users_list">
+    <li>
+      <div class="users_list__email">email:</div>
+      <div class="users_list__name">name:</div>
+      <div class="users_list__provider">provider:</div>
+      <div class="users_list__role">role:</div>
+      <div class="users_list__time">created_at:</div>
+      <div class="users_list__links">links:</div>
+    </li>
+    <% @users.each do |user| %>
+      <li>
+        <div class="users_list__email"><%= user.email %></div>
+        <div class="users_list__name"><%= user.name %></div>
+        <div class="users_list__provider"><%= user.provider || "nil" %></div>
+        <div class="users_list__role"><%= user.role %></div>
+        <div class="users_list__time"><%= user.created_at.to_formatted_s(:short) %></div>
+        <div class="users_list__links">
+          <%= link_to "Show", admin_show_path(id: user.id), class: "button_micro" %>
+          <%= link_to "Delete", admin_destroy_path(id: user.id), class: "button_micro", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <ul class="logs_list">
+    <li>
+      <div>email:</div>
+      <div>ip_address:</div>
+      <div>count:</div>
+    </li>
+    <% @logs.each do |log| %>
+      <li>
+        <div><%= log.user&.email || "nil" %></div>
+        <div><%= log.ip_address || "nil" %></div>
+        <div><%= log.request_count %></div>
+      </li>
+    <% end %>
+  </ul>
+</main>

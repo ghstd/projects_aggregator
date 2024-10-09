@@ -2,7 +2,7 @@ module ApplicationHelper
   include Pagy::Frontend
 
   def current_page_tab_title(page_title)
-    base_title = 'Projects Aggregator'
+    base_title = ENV["APP_NAME"]
     if page_title.present?
       page_title + " | " + base_title
     else

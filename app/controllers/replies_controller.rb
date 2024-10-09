@@ -9,6 +9,13 @@ class RepliesController < ApplicationController
     @reply = @comment.replies.build(reply_params)
     @reply.user = current_user
     if @reply.save
+
+      if current_user.admin?
+        notify_user @comment.user
+      else
+        notify_admin
+      end
+
       flash[:notice] = "Reply was successfully created."
       redirect_to comments_path
     else

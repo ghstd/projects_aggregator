@@ -4,4 +4,5 @@ class ApplicationController < ActionController::Base
   include Internationalization
   include Authorization
   include RequestsLog
+  include Notify
 end

@@ -21,4 +21,5 @@ class PagesController < ApplicationController
 
     render "devise/registrations/edit", locals: {resource: resource, resource_name: resource_name}
   end
+
 end

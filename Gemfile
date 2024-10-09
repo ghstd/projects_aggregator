@@ -52,6 +52,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 
   gem "faker", "~> 3.4"
+  gem 'dotenv-rails', '~> 3.1'
 end
 
 group :development do

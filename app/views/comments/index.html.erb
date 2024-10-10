@@ -7,10 +7,13 @@
     <p>(Your comments will only be visible to you and the author of the website.)</p>
   </div>
   <div class="comments__body">
-    <%= link_to "Create comment", new_comment_path, class: "comments__button button" %>
-    <ul class="comments__list">
+    <%= link_to "Create comment", new_comment_path, class: "comments__button button", data: {turbo_frame: dom_id(Comment.new)} %>
+    <%= turbo_frame_tag Comment.new %>
+    <ul class="comments__list" id="comments">
       <% @comments.each do |comment| %>
-        <li class="comment"><%= render comment %></li>
+        <%= turbo_frame_tag comment do %>
+          <li class="comment"><%= render comment %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>

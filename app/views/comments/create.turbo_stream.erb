@@ -1,0 +1,11 @@
+<%= turbo_stream.append 'comments' do %>
+  <%= turbo_frame_tag @comment, data: { controller: "scroll", action: "turbo:frame-load->scroll#autoScroll" } do %>
+    <li class="comment"><%= render @comment %></li>
+  <% end %>
+<% end %>
+
+<%= turbo_stream.replace Comment.new do %>
+  <%= turbo_frame_tag Comment.new %>
+<% end %>
+
+<%= append_flash %>

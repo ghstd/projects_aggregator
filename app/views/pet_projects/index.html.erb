@@ -34,11 +34,9 @@
           <div>Github: <a href="#"><%= pet_project.github %></a></div>
           <div>Hosting: <a href="#"><%= pet_project.hosting %></a></div>
         </div>
-        <!-- TODO: delete -->
-        <div><%= pet_project.age %></div>
-        <!-- -->
         <%= link_to "Show", pet_project_path(pet_project), class: "short_card__button button" %>
       </article>
     <% end %>
+
   </div>
 </main>

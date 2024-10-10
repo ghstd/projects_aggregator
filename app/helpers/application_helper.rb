@@ -66,4 +66,8 @@ module ApplicationHelper
 
     image_tag src, class: css_class, alt: "gravatar image"
   end
+
+  def append_flash
+    turbo_stream.append 'flash_container', partial: 'partials/flash_messages'
+  end
 end

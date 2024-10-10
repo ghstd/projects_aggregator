@@ -16,10 +16,19 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     if @comment.save
       notify_admin
-      flash[:notice] = "Comment was successfully created."
-      redirect_to comments_path
+
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Comment was successfully created."
+          redirect_to comments_path
+        end
+
+        format.turbo_stream do
+          flash.now[:notice] = "Comment was successfully created."
+        end
+      end
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -28,17 +37,34 @@ class CommentsController < ApplicationController
 
   def update
     if @comment.update(comment_params)
-      flash[:notice] = "Comment was successfully updated."
-      redirect_to comments_path
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Comment was successfully updated."
+          redirect_to comments_path
+        end
+
+        format.turbo_stream do
+          flash.now[:notice] = "Comment was successfully updated."
+        end
+      end
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @comment.destroy
-    flash[:notice] = "Comment was successfully destroyed."
-    redirect_to comments_path
+
+    respond_to do |format|
+      format.html do
+        flash[:notice] = "Comment was successfully destroyed."
+        redirect_to comments_path
+      end
+
+      format.turbo_stream do
+        flash[:notice] = "Comment was successfully destroyed."
+      end
+    end
   end
 
   private

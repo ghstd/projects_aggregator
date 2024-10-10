@@ -1,0 +1,7 @@
+<%= turbo_stream.replace @comment do %>
+  <%= turbo_frame_tag @comment do %>
+    <li class="comment"><%= render @comment %></li>
+  <% end %>
+<% end %>
+
+<%= append_flash %>

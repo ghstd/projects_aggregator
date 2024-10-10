@@ -11,6 +11,7 @@ import MenuButtonController from "./menu_button_controller"
 import CookieBannerController from "./cookie_banner_controller"
 import NotificationsErrorsController from "./notifications_errors_controller"
 import RepliesController from "./replies_controller"
+import ScrollController from "./scroll_controller"
 
 application.register("sort", SortController)
 application.register("theme", ThemeController)
@@ -19,3 +20,4 @@ application.register("menuButton", MenuButtonController)
 application.register("cookieBanner", CookieBannerController)
 application.register("notificationsErrors", NotificationsErrorsController)
 application.register("replies", RepliesController)
+application.register("scroll", ScrollController)

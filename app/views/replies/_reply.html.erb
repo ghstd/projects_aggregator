@@ -4,7 +4,7 @@
 </div>
 <div class="reply__body">
   <div class="reply__text"><%= simple_format(reply.text) %></div>
-  <div class="reply__links" data-turbo="true">
+  <div class="reply__links">
     <%= link_to edit_comment_reply_path(comment, reply), class: "button_micro" do %>
       <%= render "components/comments/edit_button" %>
     <% end %>

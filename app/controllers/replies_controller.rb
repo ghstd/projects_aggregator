@@ -32,7 +32,7 @@ class RepliesController < ApplicationController
       flash[:notice] = "Reply was successfully updated."
       redirect_to comments_path
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

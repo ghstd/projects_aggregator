@@ -6,7 +6,8 @@ class User < ApplicationRecord
   enum role: { user: 0, admin: 1 }
 
   devise :database_authenticatable, :registerable,
-          :recoverable, :rememberable, :validatable, :omniauthable
+          :recoverable, :rememberable, :validatable, :omniauthable,
+          omniauth_providers: [:facebook, :google_oauth2, :github]
 
   before_save :set_gravatar_hash, if: :email_changed?
 

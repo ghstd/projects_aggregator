@@ -36,6 +36,7 @@
         <div><%= log.user&.email || "nil" %></div>
         <div><%= log.ip_address || "nil" %></div>
         <div><%= log.request_count %></div>
+        <%= link_to "Delete", admin_destroy_log_path(id: log.id), class: "button_micro", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
       </li>
     <% end %>
   </ul>

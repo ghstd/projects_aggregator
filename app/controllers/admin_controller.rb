@@ -20,6 +20,13 @@ class AdminController < ApplicationController
     redirect_to admin_index_path
   end
 
+  def destroy_log
+    @log = RequestLogger.find(params[:id])
+    @log.destroy
+    flash[:notice] = "Log was successfully destroyed."
+    redirect_to admin_index_path
+  end
+
   private
 
   def admin_required

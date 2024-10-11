@@ -6,12 +6,28 @@
 }
 
 .flash_messages {
+	position: relative;
 	background-color: var(--theme_color_5);
 	color: $light_color;
 	font-size: 1.2rem;
 	text-align: start;
 	display: flex;
+	justify-content: space-between;
 	border-radius: 5px;
+	padding: 0 0 0.1rem 0;
+	margin: 0 0 0.1rem 0;
+	--time-line-width: 0;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: var(--time-line-width);
+		height: 2px;
+		background-color: var(--theme_color_1);
+		transition: width 10s linear;
+	}
 
 	li {
 		margin: 0.2rem;

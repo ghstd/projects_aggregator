@@ -1,17 +1,18 @@
 .home {
 	padding: 5rem 0 0 0;
+	color: var(--text_color);
 
 	&__title {
 		font-size: 3rem;
 		text-align: center;
 		margin: 0 0 5rem 0;
-		color: var(--text_color);
+		
 	}
 
 	&__body {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		font-weight: 600;
-		max-width: 50%;
+		max-width: 60%;
 		margin: 0 auto;
 	}
 }

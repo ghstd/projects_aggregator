@@ -62,7 +62,7 @@ class CommentsController < ApplicationController
       end
 
       format.turbo_stream do
-        flash[:notice] = "Comment was successfully destroyed."
+        flash.now[:notice] = "Comment was successfully destroyed."
       end
     end
   end

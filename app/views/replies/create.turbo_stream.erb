@@ -1,0 +1,9 @@
+<%= turbo_stream.append "#{dom_id @comment}_replies" do %>
+  <%= turbo_frame_tag @reply, data: { controller: "scroll" } do %>
+    <li class="reply">
+      <%= render "replies/reply", comment: @comment, reply: @reply %>
+    </li>
+  <% end %>
+<% end %>
+
+<%= append_flash %>

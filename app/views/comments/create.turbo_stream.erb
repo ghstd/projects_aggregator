@@ -1,5 +1,5 @@
 <%= turbo_stream.append 'comments' do %>
-  <%= turbo_frame_tag @comment, data: { controller: "scroll", action: "turbo:frame-load->scroll#autoScroll" } do %>
+  <%= turbo_frame_tag @comment, data: { controller: "scroll" } do %>
     <li class="comment"><%= render @comment %></li>
   <% end %>
 <% end %>

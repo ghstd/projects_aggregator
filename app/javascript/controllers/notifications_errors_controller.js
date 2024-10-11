@@ -2,18 +2,16 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
 
-	// connect() {
-	// 	const observer = new MutationObserver((mutations) => {
-	// 		mutations.forEach((mutation) => {
-	// 			console.log('Содержимое элемента изменилось:', mutation)
-	// 		})
-	// 	})
-	// 	const config = { childList: true, subtree: true }
-	// 	observer.observe(this.element, config)
-	// }
+	connect() {
+		setTimeout(this.changeWidth.bind(this, '100%'), 1000)
+		setTimeout(() => this.close(), 11000)
+	}
+
+	changeWidth(width) {
+		this.element.style.setProperty('--time-line-width', width)
+	}
 
 	close() {
-		// this.element.remove()
-		this.element.innerHTML  = ""
+		this.element.remove()
 	}
 }

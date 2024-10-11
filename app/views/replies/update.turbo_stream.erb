@@ -1,0 +1,9 @@
+<%= turbo_stream.replace @reply do %>
+  <%= turbo_frame_tag @reply do %>
+    <li class="reply">
+      <%= render "replies/reply", comment: @comment, reply: @reply %>
+    </li>
+  <% end %>
+<% end %>
+
+<%= append_flash %>

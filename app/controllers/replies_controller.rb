@@ -16,8 +16,16 @@ class RepliesController < ApplicationController
         notify_admin
       end
 
-      flash[:notice] = "Reply was successfully created."
-      redirect_to comments_path
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Reply was successfully created."
+          redirect_to comments_path
+        end
+
+        format.turbo_stream do
+          flash.now[:notice] = "Reply was successfully created."
+        end
+      end
     else
       flash[:alert] = "Reply was not created."
       redirect_to comments_path
@@ -29,8 +37,16 @@ class RepliesController < ApplicationController
 
   def update
     if @reply.update(reply_params)
-      flash[:notice] = "Reply was successfully updated."
-      redirect_to comments_path
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Reply was successfully updated."
+          redirect_to comments_path
+        end
+
+        format.turbo_stream do
+          flash.now[:notice] = "Reply was successfully updated."
+        end
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,8 +54,17 @@ class RepliesController < ApplicationController
 
   def destroy
     @reply.destroy
-    flash[:notice] = "Reply was successfully destroyed."
-    redirect_to comments_path
+
+    respond_to do |format|
+      format.html do
+        flash[:notice] = "Reply was successfully destroyed."
+        redirect_to comments_path
+      end
+
+      format.turbo_stream do
+        flash.now[:notice] = "Reply was successfully destroyed."
+      end
+    end
   end
 
   private

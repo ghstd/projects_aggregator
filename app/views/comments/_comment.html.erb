@@ -16,11 +16,13 @@
 
 
 <div class="replies" data-controller="replies">
-  <ul>
+  <ul id="<%= dom_id comment %>_replies">
     <% comment.replies.each do |reply| %>
-      <li class="reply">
-        <%= render "replies/reply", comment: comment, reply: reply %>
-      </li>
+      <%= turbo_frame_tag reply do %>
+        <li class="reply">
+          <%= render "replies/reply", comment: comment, reply: reply %>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 

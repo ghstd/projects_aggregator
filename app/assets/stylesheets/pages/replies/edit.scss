@@ -15,12 +15,14 @@
 	&__body {
 		max-width: 70%;
 		margin: 0 auto;
+		text-align: center;
 
 		form {
 			display: flex;
 			flex-direction: column;
 			gap: 1.5rem;
 			width: 100%;
+			margin: 0 0 1rem 0;
 		}
 
 		textarea {

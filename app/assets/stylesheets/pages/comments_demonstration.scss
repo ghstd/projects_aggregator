@@ -1,0 +1,22 @@
+.comments_demonstration {
+	max-width: 70%;
+	padding: 3rem 0 0 0;
+	margin: 0 auto;
+	color: var(--text_color);
+
+	h1 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin: 0 0 3rem 0;
+	}
+
+	p {
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+
+	span {
+		color: var(--theme_color_2);
+		font-weight: 700;
+	}
+}

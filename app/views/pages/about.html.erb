@@ -1,5 +1,5 @@
-<% provide :current_page_tab_title, current_page_tab_title('About') %>
-<%= render partial: "shared/header", locals: { current_page: 'About' } %>
+<% provide :current_page_tab_title, current_page_tab_title(t("header.about")) %>
+<%= render partial: "shared/header", locals: { current_page: t("header.about") } %>
 
 
 <h1>About page</h1>

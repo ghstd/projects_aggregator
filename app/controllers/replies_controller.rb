@@ -18,12 +18,12 @@ class RepliesController < ApplicationController
 
       respond_to do |format|
         format.html do
-          flash[:notice] = "Reply was successfully created."
+          flash[:notice] = t("controllers.replies.create.success")
           redirect_to comments_path
         end
 
         format.turbo_stream do
-          flash.now[:notice] = "Reply was successfully created."
+          flash.now[:notice] = t("controllers.replies.create.success")
         end
       end
     else
@@ -39,12 +39,12 @@ class RepliesController < ApplicationController
     if @reply.update(reply_params)
       respond_to do |format|
         format.html do
-          flash[:notice] = "Reply was successfully updated."
+          flash[:notice] = t("controllers.replies.update.success")
           redirect_to comments_path
         end
 
         format.turbo_stream do
-          flash.now[:notice] = "Reply was successfully updated."
+          flash.now[:notice] = t("controllers.replies.update.success")
         end
       end
     else
@@ -57,12 +57,12 @@ class RepliesController < ApplicationController
 
     respond_to do |format|
       format.html do
-        flash[:notice] = "Reply was successfully destroyed."
+        flash[:notice] = t("controllers.replies.destroy.success")
         redirect_to comments_path
       end
 
       format.turbo_stream do
-        flash.now[:notice] = "Reply was successfully destroyed."
+        flash.now[:notice] = t("controllers.replies.destroy.success")
       end
     end
   end

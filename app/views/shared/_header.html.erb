@@ -1,17 +1,17 @@
 <header class="header">
   <nav class="header__navigation">
-    <%= nav_link "Home", root_path, current_page: current_page %>
-    <%= nav_link "Projects", pet_projects_path, current_page: current_page %>
-    <%= nav_link "About", pages_about_path, current_page: current_page %>
+    <%= nav_link t("header.home"), root_path, current_page: current_page %>
+    <%= nav_link t("header.projects"), pet_projects_path, current_page: current_page %>
+    <%= nav_link t("header.about"), pages_about_path, current_page: current_page %>
 
     <% if user_signed_in? %>
-      <%= nav_link "Comments", comments_path, current_page: current_page %>
+      <%= nav_link t("header.comments"), comments_path, current_page: current_page %>
     <% else %>
-      <%= nav_link "Comments", pages_comments_demonstration_path, current_page: current_page %>
+      <%= nav_link t("header.comments"), pages_comments_demonstration_path, current_page: current_page %>
     <% end %>
 
     <% if user_signed_in? && current_user.admin? %>
-      <%= nav_link "Admin", admin_index_path, current_page: current_page %>
+      <%= nav_link t("header.admin"), admin_index_path, current_page: current_page %>
     <% end %>
   </nav>
 
@@ -28,7 +28,7 @@
         <%= gravatar(current_user) %>
       </li>
     <% else %>
-      <li class="header_login"><%= link_to "Log In", new_user_session_path %></li>
+      <li class="header_login"><%= link_to t("header.login"), new_user_session_path %></li>
     <% end %>
     <li class="menu_button" data-controller="menuButton">
       <button class="menu_button__title" data-action="menuButton#show">
@@ -38,10 +38,10 @@
       </button>
       <div class="menu_button__body">
         <% if user_signed_in? %>
-          <%= link_to "Profile", pages_profile_path %>
-          <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete} %>
+          <%= link_to t("header.profile"), pages_profile_path %>
+          <%= link_to t("header.logout"), destroy_user_session_path, data: {turbo_method: :delete} %>
         <% else %>
-          <%= link_to "Log In", new_user_session_path %>
+          <%= link_to t("header.login"), new_user_session_path %>
         <% end %>
       </div>
     </li>

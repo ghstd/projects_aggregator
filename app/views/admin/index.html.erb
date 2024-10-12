@@ -1,5 +1,5 @@
-<% provide :current_page_tab_title, current_page_tab_title('Admin') %>
-<%= render partial: "shared/header", locals: { current_page: 'Admin' } %>
+<% provide :current_page_tab_title, current_page_tab_title(t("header.admin")) %>
+<%= render partial: "shared/header", locals: { current_page: t("header.admin") } %>
 
 <main class="admin_users">
   <ul class="users_list">

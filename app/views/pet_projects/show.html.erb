@@ -1,7 +1,7 @@
 <% provide :current_page_tab_title, current_page_tab_title(@pet_project.title) %>
 
 <article class="project">
-  <%= link_to "Back", previous_page_url, class: "project__button button" %>
+  <%= link_to t("buttons.back"), previous_page_url, class: "project__button button" %>
   <h2 class="project__title"><%= @pet_project.title %></h2>
   <div class="project__body">
     <p class="project__description">Description: <%= @pet_project.description %></p>

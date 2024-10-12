@@ -1,13 +1,13 @@
-<% provide :current_page_tab_title, current_page_tab_title('Comments') %>
-<%= render partial: "shared/header", locals: { current_page: 'Comments' } %>
+<% provide :current_page_tab_title, current_page_tab_title(t("header.comments")) %>
+<%= render partial: "shared/header", locals: { current_page: t("header.comments") } %>
 
 <main class="comments">
   <div class="comments__title">
-    <h1>Comments</h1>
-    <p>(Your comments will only be visible to you and the author of the website.)</p>
+    <h1><%= t(".title") %></h1>
+    <p><%= t(".text") %></p>
   </div>
   <div class="comments__body">
-    <%= link_to "Create comment", new_comment_path, class: "comments__button button", data: {turbo_frame: dom_id(Comment.new)} %>
+    <%= link_to t("buttons.create_comment"), new_comment_path, class: "comments__button button", data: {turbo_frame: dom_id(Comment.new)} %>
     <%= turbo_frame_tag Comment.new %>
     <ul class="comments__list" id="comments">
       <% @comments.each do |comment| %>

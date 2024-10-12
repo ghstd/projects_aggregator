@@ -1,10 +1,9 @@
-<div class="cookie_banner" data-controller="cookieBanner">
-  <div class="cookie_banner__header">
-    <h2>Cookie Policy</h2>
+<div class="cookie_banner_card" data-controller="cookieBanner">
+  <div class="cookie_banner_card__header">
+    <h2><%= t("cookie_banner.title") %></h2>
     <button data-action="cookieBanner#close_banner">&times;</button>
   </div>
   <p>
-    By using this website, you agree to the use of cookies in accordance with our 
-    <strong><%= link_to "Privacy Policy", pages_privacy_policy_path %></strong>.
+    <%= t("cookie_banner.body") %> <strong><%= link_to "Privacy Policy", pages_privacy_policy_path %></strong>.
   </p>
 </div>

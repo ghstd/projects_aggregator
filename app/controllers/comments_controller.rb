@@ -19,12 +19,12 @@ class CommentsController < ApplicationController
 
       respond_to do |format|
         format.html do
-          flash[:notice] = "Comment was successfully created."
+          flash[:notice] = t("controllers.comments.create.success")
           redirect_to comments_path
         end
 
         format.turbo_stream do
-          flash.now[:notice] = "Comment was successfully created."
+          flash.now[:notice] = t("controllers.comments.create.success")
         end
       end
     else
@@ -39,12 +39,12 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       respond_to do |format|
         format.html do
-          flash[:notice] = "Comment was successfully updated."
+          flash[:notice] = t("controllers.comments.update.success")
           redirect_to comments_path
         end
 
         format.turbo_stream do
-          flash.now[:notice] = "Comment was successfully updated."
+          flash.now[:notice] = t("controllers.comments.update.success")
         end
       end
     else
@@ -57,12 +57,12 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       format.html do
-        flash[:notice] = "Comment was successfully destroyed."
+        flash[:notice] = t("controllers.comments.destroy.success")
         redirect_to comments_path
       end
 
       format.turbo_stream do
-        flash.now[:notice] = "Comment was successfully destroyed."
+        flash.now[:notice] = t("controllers.comments.destroy.success")
       end
     end
   end

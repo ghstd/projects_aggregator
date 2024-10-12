@@ -1,5 +1,5 @@
-<% provide :current_page_tab_title, current_page_tab_title('Projects') %>
-<%= render partial: "shared/header", locals: { current_page: 'Projects' } %>
+<% provide :current_page_tab_title, current_page_tab_title(t("header.projects")) %>
+<%= render partial: "shared/header", locals: { current_page: t("header.projects") } %>
 
 <main class="projects">
   <div class="projects__body">
@@ -8,13 +8,13 @@
       <%= pagination @pagy %>
       <div class="sort" data-controller="sort">
         <button class="sort__title" data-action="sort#show">
-          <span>sort</span>
+          <span><%= t("buttons.sort") %></span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </button>
         <div class="sort__body">
-          <% ["new", "old", "game"].each do |sort_param| %>
+          <% [t("buttons.new"), t("buttons.old"), t("buttons.game")].each do |sort_param| %>
             <%= link_to sort_param, pet_projects_path(sort: sort_param, page: @pagy.page), class: sort_item_class(sort_param) %>
           <% end %>
         </div>
@@ -34,7 +34,7 @@
           <div>Github: <a href="#"><%= pet_project.github %></a></div>
           <div>Hosting: <a href="#"><%= pet_project.hosting %></a></div>
         </div>
-        <%= link_to "Show", pet_project_path(pet_project), class: "short_card__button button" %>
+        <%= link_to t("buttons.show"), pet_project_path(pet_project), class: "short_card__button button" %>
       </article>
     <% end %>
 

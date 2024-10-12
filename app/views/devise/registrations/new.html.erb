@@ -1,5 +1,5 @@
 <main class="sign_in_up">
-  <%= link_to "Back", root_path, class: "button sign_in_up__button" %>
+  <%= link_to t("buttons.back"), root_path, class: "button sign_in_up__button" %>
 
   <h1 class="sign_in_up__title">Sign Up</h1>
 
@@ -28,7 +28,7 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password" %>
       </div>
 
-      <%= f.submit "Sign up", class: "devise_form__button button" %>
+      <%= f.submit t("buttons.sign_up"), class: "devise_form__button button" %>
 
     <% end %>
 

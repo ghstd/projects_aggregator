@@ -1,31 +1,79 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+
+  # controllers
+  controllers:
+    comments:
+      create:
+        success: "Comment was successfully created."
+      update:
+        success: "Comment was successfully updated."
+      destroy:
+        success: "Comment was successfully deleted."
+
+    replies:
+      create:
+        success: "Reply was successfully created."
+      update:
+        success: "Reply was successfully updated."
+      destroy:
+        success: "Reply was successfully deleted."
+
+  # components
+  header:
+    home: "Home"
+    projects: "Projects"
+    about: "About"
+    comments: "Comments"
+    admin: "Admin"
+    login: "Log In"
+    profile: "Profile"
+    logout: "Log Out"
+    language: "Lang"
+
+  cookie_banner:
+    title: "Cookie Policy"
+    body: "By using this website, you agree to the use of cookies in accordance with our"
+
+  # all pages
+  pages:
+    home:
+      title: "What is this site about?"
+      body: |
+        This is a collection of educational projects with a short description of each one.
+        Not all of them may be complete or working properly.
+        The purpose of this site is to show progress and a timeline of changes.
+    comments_demonstration:
+      title: "Here you can leave your comments"
+      body_html: |
+            You can leave your comments on this page.
+            Your comments will only be visible to you and the author of the website.
+            <span>However, you must register to leave comments.</span>
+  comments:
+    index:
+      title: "Comments"
+      text: "(Your comments will only be visible to you and the author of the website.)"
+
+  # buttons
+  buttons:
+    sort: "sort"
+    new: "new"
+    old: "old"
+    game: "game"
+    show: "Show"
+    back: "Back"
+    create_comment: "Create comment"
+    close: "Close"
+    save: "Save"
+    add_reply: "Add reply"
+    edit: "Edit"
+    update: "Update"
+    delete: "Delete"
+    sign_up: "Sign up"
+    log_in: "Log in"
+    forgot_your_password: "Forgot your password?"
+    not_receive_confirmation: "Didn't receive confirmation instructions?"
+    not_receive_unlock: "Didn't receive unlock instructions?"
+    change_password: "Change my password"
+    send_reset: "Send reset instructions"
+
+

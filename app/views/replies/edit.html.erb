@@ -1,10 +1,10 @@
 <main class="reply_edit">
-  <%= link_to "Back", comments_path, class: "button reply_edit__button" %>
+  <%= link_to t("buttons.back"), comments_path, class: "button reply_edit__button" %>
   <h1 class="reply_edit__title">Edit reply</h1>
   <%= turbo_frame_tag @reply do %>
     <div class="reply_edit__body">
       <% if request.headers["Turbo-Frame"].present? %>
-        <%= link_to "Close", comments_path, class: "button_small comments__close_button" %>
+        <%= link_to t("buttons.close"), comments_path, class: "button_small comments__close_button" %>
       <% end %>
       <%= render "form", comment: @comment, reply: @reply %>
     </div>

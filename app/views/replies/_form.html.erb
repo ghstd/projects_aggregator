@@ -2,5 +2,5 @@
   <%= render 'shared/errors', object: reply %>
 
   <%= f.text_area :text, autofocus: true %>
-  <%= f.submit "Save", class: params[:action] == "edit" ? "button_small" : "button_micro" %>
+  <%= f.submit t("buttons.save"), class: params[:action] == "edit" ? "button_small" : "button_micro" %>
 <% end %>

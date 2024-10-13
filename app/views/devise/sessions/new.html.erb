@@ -1,23 +1,23 @@
 <main class="sign_in_up">
   <%= link_to t("buttons.back"), root_path, class: "button sign_in_up__button" %>
 
-  <h1 class="sign_in_up__title">Log in</h1>
+  <h1 class="sign_in_up__title"><%= t(".title") %></h1>
 
   <div class="sign_in_up__body">
     <%= form_with model: resource, url: session_path(resource_name), class: "sign_in_up__form devise_form" do |f| %>
       <div class="devise_form__field">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+        <%= f.label :email, t(".email") %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t(".email") %>
       </div>
 
       <div class="devise_form__field">
-        <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+        <%= f.label :password, t(".password") %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: t(".password") %>
       </div>
 
       <% if devise_mapping.rememberable? %>
         <div class="devise_form__check_box_field">
-          <%= f.label :remember_me %>
+          <%= f.label :remember_me, t(".remember_me") %>
           <%= f.check_box :remember_me %>
         </div>
       <% end %>
@@ -26,7 +26,7 @@
 
     <% end %>
 
-    <h2 class="sign_in_up__text">Or you can use:</h2>
+    <h2 class="sign_in_up__text"><%= t(".text") %></h2>
 
     <div class="sign_in_up__oauth_links">
       <%= render "devise/shared/omniauth_links" %>

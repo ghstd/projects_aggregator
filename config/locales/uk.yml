@@ -52,6 +52,44 @@ uk:
     index:
       title: "Коментарі"
       text: "(Ваші коментарі бачитимете лише ви та автор сайту.)"
+  devise:
+    sessions:
+      new:
+        title: "Вхід в систему"
+        email: "Пошта"
+        password: "Пароль"
+        remember_me: "Запам'ятати мене"
+        text: "Або ви можете скористатися:"
+    registrations:
+      new:
+        title: "Реєстрація"
+        name: "Ім'я"
+        email: "Пошта"
+        password: "Пароль"
+        password_confirmation: "Підтвердження пароля"
+        password_length: "Пароль: мінімум %{min_length} символів"
+        text: "Або ви можете скористатися:"
+      edit:
+        demonstration_title: "Профіль"
+        title: "Редагування профілю"
+        name: "Ім'я"
+        email: "Пошта"
+        password_title: "Залиште поля порожніми, якщо ви не хочете змінювати пароль:"
+        password: "Пароль"
+        password_length: "Пароль: мінімум %{min_length} символів"
+        password_confirmation: "Підтвердження паролю"
+        current_password: "Поточний пароль"
+        current_password_text: "Ваш поточний пароль:"
+        delete_text: "Видалити акаунт:"
+    passwords:
+      new:
+        title: "Забули пароль?"
+        email: "Пошта"
+      edit:
+        title: "Змініть пароль"
+        new_password: "Новий пароль"
+        confirm_password: "Підтвердження нового пароля"
+        password_length: "Пароль: мінімум %{min_length} символів"
 
   # buttons
   buttons:
@@ -66,15 +104,17 @@ uk:
     save: "Зберегти"
     add_reply: "Додати відповідь"
     edit: "Редагувати"
-    update: "Оновити"
+    update: "Зберегти"
     delete: "Видалити"
     sign_up: "Зареєструватися"
-    log_in: "Увійти"
+    log_in: "Увійти"
+    sign_up_page: "Сторіка реєстрації"
+    log_in_page: "Сторіка входу"
     forgot_your_password: "Забули пароль?"
     not_receive_confirmation: "Не отримали інструкції щодо підтвердження?"
     not_receive_unlock: "Не отримали інструкції з розблокування?"
     change_password: "Змінити мій пароль"
-    send_reset: "Надіслати інструкції щодо скидання"
+    send_reset: "Надіслати інструкції щодо скидання паролю"
 
 
 

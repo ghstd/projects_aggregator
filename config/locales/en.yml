@@ -52,6 +52,44 @@ en:
     index:
       title: "Comments"
       text: "(Your comments will only be visible to you and the author of the website.)"
+  devise:
+    sessions:
+      new:
+        title: "Log in"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+        text: "Or you can use:"
+    registrations:
+      new:
+        title: "Sign up"
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        password_length: "Password: %{min_length} characters minimum"
+        text: "Or you can use:"
+      edit:
+        demonstration_title: "Profile"
+        title: "Edit profile"
+        name: "Name"
+        email: "Email"
+        password_title: "Leave blank if you don't want to change it:"
+        password: "Password"
+        password_length: "Password: %{min_length} characters minimum"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        current_password_text: "Your current password:"
+        delete_text: "Delete account:"
+    passwords:
+      new:
+        title: "Forgot your password?"
+        email: "Email"
+      edit:
+        title: "Change your password"
+        new_password: "New password"
+        confirm_password: "Confirm new password"
+        password_length: "Password: %{min_length} characters minimum"
 
   # buttons
   buttons:
@@ -70,6 +108,8 @@ en:
     delete: "Delete"
     sign_up: "Sign up"
     log_in: "Log in"
+    sign_up_page: "Sign up"
+    log_in_page: "Log in"
     forgot_your_password: "Forgot your password?"
     not_receive_confirmation: "Didn't receive confirmation instructions?"
     not_receive_unlock: "Didn't receive unlock instructions?"

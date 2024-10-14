@@ -84,3 +84,5 @@ gem "omniauth-github", "~> 2.0"
 gem "omniauth-google-oauth2", "~> 1.2"
 
 gem "pundit", "~> 2.4"
+
+gem "sidekiq", "~> 7.3"

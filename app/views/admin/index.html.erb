@@ -2,6 +2,9 @@
 <%= render partial: "shared/header", locals: { current_page: t("header.admin") } %>
 
 <main class="admin_users">
+  <div class="admin_users__sidekiq_link">
+    <%= link_to "Sidekiq::Web", "/sidekiq", target: "_blank", class: "button_micro" %>
+  </div>
   <ul class="users_list">
     <li>
       <div class="users_list__email">email:</div>

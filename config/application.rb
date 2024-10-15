@@ -29,7 +29,7 @@ module ProjectsAggregator
 
     # ===============================================
     config.hosts << "bass-loyal-closely.ngrok-free.app"
-    config.active_job.queue_adapter = :sidekiq
+    # config.active_job.queue_adapter = :sidekiq
     # ===============================================
   end
 end

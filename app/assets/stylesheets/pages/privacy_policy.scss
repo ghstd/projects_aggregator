@@ -1,9 +1,13 @@
 .privacy_policy {
-	padding: 2rem 0 0 0;
+	padding: 2rem 1rem 1rem 1rem;
 	background-color: var(--privacy_policy_background_color);
 
 	&__button {
 		margin: 0 0 0 2rem;
+
+		@media (max-width: $tablet) {
+			margin: 0 0 1rem 2rem;
+		}
 	}
 
 	&__title {
@@ -12,6 +16,16 @@
 		border-bottom: 2px solid var(--theme_color_7);
     max-width: 50%;
     margin: 0 auto 1rem;
+
+		@media (max-width: $tablet) {
+			font-size: 2.5rem;
+			max-width: 80%;
+		}
+
+		@media (max-width: $mobile) {
+		font-size: 2.2rem;
+			max-width: 100%;
+		}
 	}
 
 	&__body {
@@ -20,6 +34,14 @@
 		font-size: 1.2rem;
 		font-weight: 500;
 
+		@media (max-width: $tablet) {
+			max-width: 90%;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
+
 		h2 {
 			margin: 0 0 0.2rem 0;
 		}
@@ -27,11 +49,19 @@
 		p {
 			margin: 0 0 0.7rem 0;
 			padding: 0 0 0 2rem;
+
+			@media (max-width: $mobile) {
+				padding: 0 0 0 1rem;
+			}
 		}
 
 		ul {
 			padding: 0 0 0 2rem;
 			list-style: disc;
+
+			@media (max-width: $mobile) {
+				padding: 0 0 0 1rem;
+			}
 		}
 	}
 }

@@ -20,4 +20,20 @@
 	& span {
 		color: var(--theme_color_2);
 	}
+
+	@media (max-width: $small_screen) {
+		span {
+			display: none;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		flex-grow: 1;
+		justify-content: flex-end;
+
+		span {
+			display: block;
+		}
+	}
+
 }

@@ -3,6 +3,10 @@
 	color: var(--text_color);
 	text-align: center;
 
+	@media (max-width: $mobile) {
+		width: 100%;
+	}
+
 	&__field {
 		display: flex;
 		justify-content: space-between;
@@ -20,6 +24,10 @@
 			flex-grow: 10;
 			flex-shrink: 1;
 			box-shadow: inset 0 2px 2px var(--theme_color_7);
+
+			@media (max-width: $mobile) {
+				min-width: 0%;
+			}
 		}
 
 		input.field_with_errors {

@@ -1,8 +1,9 @@
 .form_errors {
 	position: fixed;
+	z-index: 20;
 	top: 0;
 	left: 0;
-	max-width: 20%;
+	margin: 0 2px;
 	background-color: $error_background_color;
 	color: $light_color;
 	border-radius: 5px;

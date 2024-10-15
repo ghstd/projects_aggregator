@@ -19,6 +19,7 @@
       <%= yield %>
       <div id="flash_container"><%= render "partials/flash_messages" %></div>
       <%= render "partials/cookie_banner" if !cookies[:cookies_accepted] %>
+      <div class="spinner" data-controller="spinner"></div>
     </div>
   </body>
 </html>

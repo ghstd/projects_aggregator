@@ -3,6 +3,14 @@
 	padding: 0 0 0 2rem;
 	border-left: 2px solid var(--theme_color_2);
 
+	@media (max-width: $tablet) {
+		margin: 0;
+	}
+
+	@media (max-width: $mobile) {
+		padding: 0 0 0 1rem;
+	}
+
 	&__button {
 		margin: 0 0 1rem 0;
 		display: flex !important;

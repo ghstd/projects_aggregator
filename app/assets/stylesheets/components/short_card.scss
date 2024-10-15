@@ -6,6 +6,15 @@
 	flex-direction: column;
 	border-bottom: 2px dashed var(--theme_color_4);
 
+	@media (max-width: $small_screen) {
+		max-width: 80%;
+	}
+
+	@media (max-width: $mobile) {
+		max-width: 100%;
+		padding: 1rem;
+	}
+
 	&__title {
 		background-color: var(--theme_color_4);
 		text-align: center;

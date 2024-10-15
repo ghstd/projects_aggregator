@@ -1,49 +1,54 @@
-<header class="header">
-  <nav class="header__navigation">
-    <%= nav_link t("header.home"), root_path, current_page: current_page %>
-    <%= nav_link t("header.projects"), pet_projects_path, current_page: current_page %>
-    <%= nav_link t("header.about"), pages_about_path, current_page: current_page %>
+<header class="header" data-controller="navigation">
+  <button class="header__nav_button button_small" data-action="navigation#show">Navigation</button>
+  <div class="header__nav_container">
+    <nav class="header__navigation">
+      <%= nav_link t("header.home"), root_path, current_page: current_page %>
+      <%= nav_link t("header.projects"), pet_projects_path, current_page: current_page %>
+      <%= nav_link t("header.about"), pages_about_path, current_page: current_page %>
 
-    <% if user_signed_in? %>
-      <%= nav_link t("header.comments"), comments_path, current_page: current_page %>
-    <% else %>
-      <%= nav_link t("header.comments"), pages_comments_demonstration_path, current_page: current_page %>
-    <% end %>
+      <% if user_signed_in? %>
+        <%= nav_link t("header.comments"), comments_path, current_page: current_page %>
+      <% else %>
+        <%= nav_link t("header.comments"), pages_comments_demonstration_path, current_page: current_page %>
+      <% end %>
 
-    <% if user_signed_in? && current_user.admin? %>
-      <%= nav_link t("header.admin"), admin_index_path, current_page: current_page %>
-    <% end %>
-  </nav>
+      <% if user_signed_in? && current_user.admin? %>
+        <%= nav_link t("header.admin"), admin_index_path, current_page: current_page %>
+      <% end %>
+    </nav>
 
-  <ul class="header__controls">
-    <li class="theme_switcher" data-controller="theme">
-      <%= render "components/theme/theme_switcher" %>
-    </li>
-    <li class="lang_switcher" data-controller="lang">
-      <%= render "components/lang/lang_switcher" %>
-    </li>
-    <% if user_signed_in? %>
-      <li class="header_login">
-        <span><%= current_user.name_or_email %></span>
-        <%= gravatar(current_user) %>
+    <ul class="header__controls">
+      <li class="theme_switcher" data-controller="theme">
+        <%= render "components/theme/theme_switcher" %>
       </li>
-    <% else %>
-      <li class="header_login"><%= link_to t("header.login"), new_user_session_path %></li>
-    <% end %>
-    <li class="menu_button" data-controller="menuButton">
-      <button class="menu_button__title" data-action="menuButton#show">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="menu_button__body">
-        <% if user_signed_in? %>
-          <%= link_to t("header.profile"), pages_profile_path %>
-          <%= link_to t("header.logout"), destroy_user_session_path, data: {turbo_method: :delete} %>
-        <% else %>
-          <%= link_to t("header.login"), new_user_session_path %>
-        <% end %>
-      </div>
-    </li>
-  </ul>
+      <li class="lang_switcher" data-controller="lang">
+        <%= render "components/lang/lang_switcher" %>
+      </li>
+    </ul>
+  </div>
+
+  <% if user_signed_in? %>
+    <div class="header_login">
+      <span><%= current_user.name_or_email %></span>
+      <%= gravatar(current_user) %>
+    </div>
+  <% else %>
+    <div class="header_login"><%= link_to t("header.login"), new_user_session_path %></div>
+  <% end %>
+
+  <div class="menu_button" data-controller="menuButton">
+    <button class="menu_button__title" data-action="menuButton#show">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="menu_button__body">
+      <% if user_signed_in? %>
+        <%= link_to t("header.profile"), pages_profile_path %>
+        <%= link_to t("header.logout"), destroy_user_session_path, data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to t("header.login"), new_user_session_path %>
+      <% end %>
+    </div>
+  </div>
 </header>

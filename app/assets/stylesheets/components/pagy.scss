@@ -6,6 +6,10 @@
   font-weight: 600;
   color: var(--theme_color_7);
 
+	@media (max-width: $mobile) {
+		margin: 0;
+	}
+
   // & > :not([hidden]) ~ :not([hidden]) {
   //   --space-reverse: 0;
   //   margin-right: calc(0.25rem * var(--space-reverse));

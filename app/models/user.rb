@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include ActionView::Helpers::TextHelper
+
   has_many :comments, dependent: :destroy
   has_many :replies, dependent: :destroy
   has_one :request_logger, dependent: :destroy
@@ -13,9 +15,9 @@ class User < ApplicationRecord
 
   def name_or_email
     if name.present?
-      name
+      truncate(name, length: 8)
     else
-      email.split('@')[0]
+      truncate(email.split('@')[0], length: 8)
     end
   end
 

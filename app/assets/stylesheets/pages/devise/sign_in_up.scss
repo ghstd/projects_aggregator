@@ -1,6 +1,5 @@
 .sign_in_up {
-	padding: 1rem 0 0 0;
-
+	padding: 1rem 0;
 
 	&__title {
 		text-align: center;
@@ -11,6 +10,10 @@
     margin: 0 auto 3rem;
 		border-top-left-radius: 100%;
 		border-top-right-radius: 100%;
+
+		@media (max-width: $mobile) {
+			font-size: 2rem;
+		}
 	}
 
 	&__body {
@@ -18,10 +21,22 @@
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
+
+		@media (max-width: $tablet) {
+			max-width: 80%;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 	}
 
 	&__button {
 		margin: 0 0 1rem 2rem;
+
+		@media (max-width: $tablet) {
+			margin: 0 0 2rem 2rem;
+		}
 	}
 
 	&__form {
@@ -46,6 +61,10 @@
 		border: 2px solid var(--theme_color_4);
 		align-self: center;
 		margin: 0 0 2rem 0;
+
+		@media (max-width: $mobile) {
+			padding: 2rem 1rem;
+		}
 
 		button {
 			padding: 0.5rem 4rem;
@@ -82,6 +101,10 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 }
 

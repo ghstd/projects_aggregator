@@ -12,5 +12,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width: $small_screen) {
+			margin: 0 0 1rem 0;
+		}
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
+
+	@media (max-width: $mobile) {
+		padding: 2rem 0 0 0;
 	}
 }

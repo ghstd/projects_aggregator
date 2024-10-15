@@ -5,6 +5,10 @@
 	font-weight: 600;
 	line-height: 1.25rem;
 
+	@media (max-width: $mobile) {
+		margin: 0;
+	}
+
 	&__title {
 		display: flex;
 		align-items: center;

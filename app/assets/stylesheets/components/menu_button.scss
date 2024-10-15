@@ -1,5 +1,4 @@
 .menu_button {
-	position: relative;
 
 	&__title {
 		display: flex;
@@ -26,17 +25,17 @@
 
 	&__body {
 		position: absolute;
+		top: 100%;
+		right: 0;
 		display: none;
 		flex-direction: column;
 		gap: 0.5rem;
-		top: calc(100% + 1rem);
-		left: -2rem;
 		padding: 0.7rem;
 		background-color: var(--theme_color_6);
-		border: 1px solid var(--theme_color_7);
+		border: 2px solid var(--theme_color_7);
+		box-shadow: 4px 4px 10px 0px var(--theme_color_7);
 		font-size: 1.2rem;
 		font-weight: 600;
-		z-index: 2;
 
 		a {
 			white-space: nowrap;

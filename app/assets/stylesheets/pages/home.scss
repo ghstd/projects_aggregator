@@ -7,6 +7,10 @@
 		text-align: center;
 		margin: 0 0 5rem 0;
 		
+		@media (max-width: $tablet) {
+			font-size: 2rem;
+			margin: 0 0 3rem 0;
+		}
 	}
 
 	&__body {
@@ -14,6 +18,14 @@
 		font-weight: 600;
 		max-width: 60%;
 		margin: 0 auto;
+
+		@media (max-width: $tablet) {
+			max-width: 80%;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		padding: 3rem 0 0 0;
 	}
 }
 

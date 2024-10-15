@@ -1,7 +1,7 @@
 <main class="confirmation_new">
   <h2 class="confirmation_new__title">Resend confirmation instructions</h2>
 
-  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }, class: "confirmation_new__form devise_form") do |f| %>
+  <%= form_for(model: resource, url: confirmation_path(resource_name), html: { method: :post }, class: "confirmation_new__form devise_form") do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="devise_form__field">

@@ -1,6 +1,10 @@
 @mixin characteristics {
 	align-self: stretch;
 
+	@media (max-width: $small_screen) {
+		align-self: center;
+	}
+
 	h3 {
 		font-size: 1.4rem;
 		margin: 0 0 0.5rem 0;
@@ -28,6 +32,10 @@
 
 	&__button {
 		margin: 0 0 0 2rem;
+
+		@media (max-width: $tablet) {
+			margin: 0 0 1.5rem 2rem;
+		}
 	}
 
 	&__title {
@@ -35,6 +43,10 @@
 		font-size: 3rem;
 		margin: 0 0 0.5rem 0;
 		color: var(--text_color);
+
+		@media (max-width: $mobile) {
+			font-size: 2rem;
+		}
 	}
 
 	&__body {
@@ -43,6 +55,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@media (max-width: $small_screen) {
+			max-width: 80%;
+		}
+	
+		@media (max-width: $mobile) {
+			max-width: 100%;
+			padding: 1rem;
+		}
 	}
 
 	&__description {
@@ -65,11 +86,11 @@
 
 	&__resources {
 		@include characteristics;
-		margin: 0 0 2rem 0;
 	}
 
 	&__links_title {
 		font-size: 1.4rem;
+		padding: 1rem 0 0 0;
 		margin: 0 0 0.5rem 0;
 	}
 

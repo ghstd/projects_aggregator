@@ -19,9 +19,10 @@
 
 	button {
 		align-self: flex-start;
-		background-color: $error_color;
-		border: 1px solid var(--theme_color_7);
-		box-shadow: 2px 2px 0px 0px var(--theme_color_7);
+		color: $light_color;
+		background-color: $gray_color;
+		border: 1px solid $dark_color;
+		box-shadow: 2px 2px 0px 0px $dark_color;
 		padding: 0rem 0.8rem;
 		margin: 0.5rem 0.5rem 0 0;
 		cursor: pointer;

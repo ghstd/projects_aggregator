@@ -39,7 +39,7 @@ en:
     home:
       title: "What is this site about?"
       body: |
-        This is a collection of educational projects with a short description of each one.
+        This is a collection of educational projects with a short description and visualization of each one.
         Not all of them may be complete or working properly.
         The purpose of this site is to show progress and a timeline of changes.
     comments_demonstration:

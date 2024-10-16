@@ -8,7 +8,7 @@
 
 .flash_messages {
 	position: relative;
-	background-color: var(--theme_color_5);
+	background-color: $flash_background_color;
 	color: $light_color;
 	font-size: 1.2rem;
 	text-align: start;
@@ -37,19 +37,19 @@
 	}
 
 	&__notice {
-		background-color: $notice_color;
+		background-color: $flash_notice_color;
 	}
 
 	&__alert {
-		background-color: $alert_color;
+		background-color: $flash_alert_color;
 	}
 
 	button {
 		align-self: flex-start;
 		color: $light_color;
-		background-color: var(--theme_color_5);
-		border: 1px solid var(--theme_color_7);
-		box-shadow: 2px 2px 0px 0px var(--theme_color_7);
+		background-color: $gray_color;
+		border: 1px solid $dark_color;
+		box-shadow: 2px 2px 0px 0px $dark_color;
 		padding: 0rem 0.8rem;
 		margin: 0.2rem;
 		cursor: pointer;

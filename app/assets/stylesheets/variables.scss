@@ -6,10 +6,21 @@ $small_screen: 950px;
 // colors
 $light_color: #fff;
 $dark_color: #000;
-$error_color: #f1350b;
-$error_background_color: #be563f;
-$notice_color: #2e9e02;
-$alert_color: #e98101;
+$gray_color: #444343;
+$light_gray_color: #b2b2b2;
+$orange_color: #e98101;
+$green_color: #2e9e02;
+$red_color: #f1350b;
+
+$error_background_color: $orange_color;
+
+$flash_background_color: #383737;
+$flash_notice_color: $green_color;
+$flash_alert_color: $orange_color;
+
+$spinner_color: $light_color;
+$spinner_background_color: $dark_color;
+
 
 [data-theme="light"] {
 	--theme_color_1: #{$light_color};
@@ -27,7 +38,8 @@ $alert_color: #e98101;
 	--button_background_color: var(--theme_color_6);
 	--menu__button_background_color: var(--theme_color_7);
 
-	--text_color: var(--theme_color_7);
+	--text_color: #b9d1e9;
+	--text_color_2: var(--theme_color_7);
 }
 
 [data-theme="middle"] {
@@ -47,6 +59,7 @@ $alert_color: #e98101;
 	--menu__button_background_color: var(--theme_color_7);
 
 	--text_color: var(--theme_color_7);
+	--text_color_2: var(--theme_color_7);
 }
 
 [data-theme="dark"] {
@@ -66,6 +79,6 @@ $alert_color: #e98101;
 	--menu__button_background_color: var(--theme_color_4);
 
 	--text_color: #bdddce;
+	--text_color_2: #bdddce;
 }
-
 

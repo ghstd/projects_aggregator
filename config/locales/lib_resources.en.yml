@@ -1,0 +1,37 @@
+en:
+  points:
+    visual_prototyping: "Visual prototyping"
+    final_adaptive: "Final adaptive for tablet and mobile"
+    basic_plan: "Basic plan for todo"
+    libraries_used: "Libraries used"
+    other_resources: "Other resources and technologies"
+
+  libraries:
+    - title: "Framework"
+      list:
+        - "Ruby on Rails"
+        - "Turbo"
+    - title: "Authentication"
+      list:
+        - "Devise"
+    - title: "Authorization"
+      list:
+        - "Pundit"
+    - title: "Pagination"
+      list:
+        - "Pagy"
+    - title: "Background tasks"
+      list:
+        - "Sidekiq"
+    - title: "JavaScript"
+      list:
+        - "Stimulus"
+    - title: "Bundlers"
+      list:
+        - "Bun"
+        - "Sprockets"
+    - title: "Additional libraries"
+      list:
+        - "Dotenv"
+        - "Faker"
+        - "Rails-i18n"

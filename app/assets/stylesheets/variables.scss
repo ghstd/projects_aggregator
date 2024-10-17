@@ -18,7 +18,7 @@ $flash_background_color: #383737;
 $flash_notice_color: $green_color;
 $flash_alert_color: $orange_color;
 
-$spinner_color: $light_color;
+$spinner_color: #932ed1;
 $spinner_background_color: $dark_color;
 
 
@@ -32,6 +32,7 @@ $spinner_background_color: $dark_color;
 	--theme_color_7: #002333;
 
 	--background-image: radial-gradient(100% 70% at 10% 10%, #05344a 0%, #082a3a 45%, #001e2c 100%);
+	--background-image_2: radial-gradient(100% 70% at 10% 10%, #05344a 0%, #082a3a 45%, #001e2c 100%);
 	--privacy_policy_background_color: var(--theme_color_5);
 	--header_color: var(--theme_color_7);
 	--header_background_color: var(--theme_color_6);
@@ -52,6 +53,7 @@ $spinner_background_color: $dark_color;
 	--theme_color_7: #{$dark_color};
 
 	--background-image: radial-gradient(50% 50% at 50% 50%, #062e19 0%, #0C2216 100%);
+	--background-image_2: radial-gradient(50% 50% at 50% 50%, #0b3c23 0%, #0C2216 100%);
 	--privacy_policy_background_color: var(--theme_color_5);
 	--header_color: var(--theme_color_7);
 	--header_background_color: var(--theme_color_6);
@@ -72,6 +74,7 @@ $spinner_background_color: $dark_color;
 	--theme_color_7: #{$dark_color};
 
 	--background-image: radial-gradient(100% 70% at 90% 0%, #1a2821 0%, #0D0D0D 90%, #0D0D0D 100%);
+	--background-image_2: radial-gradient(100% 70% at 10% 10%, #1d3d2d 0%, #143021 75%, #1a2821 100%);
 	--privacy_policy_background_color: var(--theme_color_4);
 	--header_color: var(--theme_color_4);
 	--header_background_color: var(--theme_color_4);

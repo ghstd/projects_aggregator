@@ -2,4 +2,91 @@
 <%= render partial: "shared/header", locals: { current_page: t("header.about") } %>
 
 
-<h1>About page</h1>
+<main class="about">
+  <div id="modal" class="modal">
+    <span class="modal__close">&times;</span>
+    <img class="modal__image">
+  </div>
+  <h1 class="about__title">How this site was made</h1>
+
+  <ul class="about__body" data-controller="modal">
+
+    <li class="about_point" data-controller="showPoint">
+      <h2 class="about_point__title" data-action="click->showPoint#show">
+        <span><%= t("points.visual_prototyping") %>:</span>
+        <%= render "components/shared/arrow" %>
+      </h2>
+      <ul class="about_point__content" data-showPoint-target="content">
+        <li>
+          <img src="<%= asset_path('pages_proto.png') %>" alt="screenshot_from_editor" data-action="click->modal#open">
+        </li>
+        <li>
+          <img src="<%= asset_path('color_proto.png') %>" alt="screenshot_from_editor" data-action="click->modal#open">
+        </li>
+      </ul>
+    </li>
+
+    <li class="about_point" data-controller="showPoint">
+      <h2 class="about_point__title" data-action="click->showPoint#show">
+        <span><%= t("points.final_adaptive") %>:</span>
+        <%= render "components/shared/arrow" %>
+      </h2>
+      <ul class="about_point__content" data-showPoint-target="content">
+        <li>
+          <img src="<%= asset_path('adaptive_example_preview.png') %>" alt="screen_recording_gif_image" 
+					data-gif-preview="<%= asset_path('adaptive_example_preview.png') %>" 
+					data-gif-src="<%= asset_path('adaptive_example.gif') %>"
+					data-action="click->modal#open">
+        </li>
+      </ul>
+    </li>
+
+    <li class="about_point" data-controller="showPoint">
+      <h2 class="about_point__title" data-action="click->showPoint#show">
+        <span><%= t("points.basic_plan") %>:</span>
+        <%= render "components/shared/arrow" %>
+      </h2>
+      <ol class="about_point__content todo_list" data-showPoint-target="content">
+        <% t("todo").each do |point| %>
+          <li><%= point %></li>
+        <% end %>
+      </ol>
+    </li>
+
+    <li class="about_point" data-controller="showPoint">
+      <h2 class="about_point__title" data-action="click->showPoint#show">
+        <span><%= t("points.libraries_used") %>:</span>
+        <%= render "components/shared/arrow" %>
+      </h2>
+      <ul class="about_point__content libraries_list" data-showPoint-target="content">
+        <% t("libraries").each do |library| %>
+          <li>
+            <h3><%= library[:title] %></h3>
+            <ul>
+              <% library[:list].each do |item| %>
+                <li><%= item %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+
+    <li class="about_point" data-controller="showPoint">
+      <h2 class="about_point__title" data-action="click->showPoint#show">
+        <span><%= t("points.other_resources") %>:</span>
+        <%= render "components/shared/arrow" %>
+      </h2>
+      <ul class="about_point__content resources_list" data-showPoint-target="content">
+        <li><a href="https://design.penpot.app">design.penpot</a></li>
+        <li><a href="https://balsamiq.cloud">balsamiq.cloud</a></li>
+        <li><a href="https://github.com/bodrovis-learning/RailsSeriesYT/tree/lesson_25/app">Ilya Krukowski - github - RailsSeriesYT</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-">Ilya Krukowski - youtube - playlist "Ruby on Rails"</a></li>
+        <li>chat gpt-4o</li>
+        <li><a href="https://render.com">render.com</a></li>
+      </ul>
+    </li>
+  </ul>
+</main>
+
+<%= render partial: "shared/footer" %>

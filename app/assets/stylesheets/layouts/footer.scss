@@ -1,0 +1,14 @@
+.footer {
+	background-color: var(--theme_color_6);
+	color: var(--theme_color_4);
+	border: 2px solid var(--theme_color_7);
+	box-shadow: 4px 4px 10px 0px var(--theme_color_7);
+	padding: 0.2rem 0;
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: center;
+
+	a:hover {
+		color: var(--theme_color_3);
+	}
+}

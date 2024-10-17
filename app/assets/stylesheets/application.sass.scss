@@ -2,10 +2,12 @@
 @import './variables';
 @import './global';
 @import './layouts/header';
+@import './layouts/footer';
 @import './layouts/cookie_banner';
 @import './layouts/flash_messages';
 @import './layouts/form_errors';
 @import './pages/home';
+@import './pages/about';
 @import './pages/privacy_policy';
 @import './pages/comments_demonstration';
 @import './pages/comments/index';
@@ -24,5 +26,6 @@
 @import './components/pagy';
 @import './components/sort';
 @import './components/spinner';
+@import './components/modal';
 
 

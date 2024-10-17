@@ -1,0 +1,37 @@
+uk:
+  points:
+    visual_prototyping: "Візуальний прототип"
+    final_adaptive: "Фінальна адаптація для планшетів і мобільних пристроїв"
+    basic_plan: "Базовий план виконання"
+    libraries_used: "Використані бібліотеки"
+    other_resources: "Інші ресурси та технології"
+
+  libraries:
+    - title: "Фреймворк"
+      list:
+        - "Ruby on Rails"
+        - "Turbo"
+    - title: "Аутентифікация"
+      list:
+        - "Devise"
+    - title: "Авторизація"
+      list:
+        - "Pundit"
+    - title: "Пагінація"
+      list:
+        - "Pagy"
+    - title: "Фонові задачі"
+      list:
+        - "Sidekiq"
+    - title: "JavaScript"
+      list:
+        - "Stimulus"
+      title: "Сборщики"
+      list:
+        - "Bun"
+        - "Sprockets"
+    - title: "Додаткові бібліотеки"
+      list:
+        - "Dotenv"
+        - "Faker"
+        - "Rails-i18n"

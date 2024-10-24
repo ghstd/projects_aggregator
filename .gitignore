@@ -28,6 +28,9 @@
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+# =============================
+!/storage/production.sqlite3
+# =============================
 
 /public/assets
 
@@ -40,4 +43,3 @@
 /node_modules
 
 /my_files
-/my_notes.md

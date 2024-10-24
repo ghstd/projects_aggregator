@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_08_162548) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_24_144905) do
   create_table "comments", force: :cascade do |t|
     t.text "text"
     t.integer "user_id", null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_08_162548) do
     t.boolean "is_game"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "video"
     t.index ["age"], name: "index_pet_projects_on_age", unique: true
     t.index ["is_game"], name: "index_pet_projects_on_is_game"
   end

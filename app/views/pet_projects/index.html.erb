@@ -14,8 +14,8 @@
           </svg>
         </button>
         <div class="sort__body">
-          <% [t("buttons.new"), t("buttons.old"), t("buttons.game")].each do |sort_param| %>
-            <%= link_to sort_param, pet_projects_path(sort: sort_param, page: @pagy.page), class: sort_item_class(sort_param) %>
+          <% [t("buttons.new"), t("buttons.old"), t("buttons.game")].each_with_index do |sort_param, index| %>
+            <%= link_to sort_param, pet_projects_path(sort: index, page: @pagy.page), class: sort_item_class(index.to_s) %>
           <% end %>
         </div>
       </div>
@@ -24,10 +24,10 @@
     <% @pet_projects.each do |pet_project| %>
       <article class="short_card">
         <h2 class="short_card__title">Title: <%= pet_project.title %></h2>
-        <p class="short_card__description">Description: <%= pet_project.description %></p>
+        <p class="short_card__description"><%= pet_project.description[I18n.locale.to_s] %></p>
         <% pet_project.images.each do |image| %>
           <div class="short_card__image">
-            <img src="data:image/png;base64,<%= image %>" />
+            <img src="<%= asset_path("projects_images/#{image}") %>" />
           </div>
         <% end %>
         <div class="short_card__links">

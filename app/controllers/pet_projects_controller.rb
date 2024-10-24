@@ -10,14 +10,14 @@ class PetProjectsController < ApplicationController
   private
 
   def sort_field
-    params[:sort] == "game" ? :is_game : :age
+    params[:sort] == "2" ? :is_game : :age
   end
 
   def sort_type
     case params[:sort]
-      when "new" then :asc
-      when "old" then :desc
-      when "game" then :desc
+      when "0" then :asc
+      when "1" then :desc
+      when "2" then :desc
       else :asc
     end
   end

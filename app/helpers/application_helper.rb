@@ -24,7 +24,7 @@ module ApplicationHelper
   end
 
   def sort_item_class(sort_param)
-    default_sort = 'new'
+    default_sort = '0'
 
     if params[:sort].present?
       params[:sort] == sort_param ? "sort__link--active" : ""

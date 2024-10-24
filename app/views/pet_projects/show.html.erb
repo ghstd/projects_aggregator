@@ -4,10 +4,10 @@
   <%= link_to t("buttons.back"), previous_page_url, class: "project__button button" %>
   <h2 class="project__title"><%= @pet_project.title %></h2>
   <div class="project__body">
-    <p class="project__description">Description: <%= @pet_project.description %></p>
+    <p class="project__description"><%= @pet_project.description[I18n.locale.to_s] %></p>
     <% @pet_project.images.each do |image| %>
       <div class="project__image">
-        <img src="data:image/png;base64,<%= image %>" />
+        <img src="<%= asset_path("projects_images/#{image}") %>" />
       </div>
     <% end %>
     <div class="project__languages">

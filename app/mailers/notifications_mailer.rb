@@ -4,6 +4,6 @@ class NotificationsMailer < ApplicationMailer
   def send_notification
     @user = params[:user]
 
-    mail to: @user.email, subject: "You got reply | #{ENV["APP_NAME"]}", from: 'admin@admin.com'
+    mail to: @user.email, subject: "You got reply | #{ENV["APP_NAME"]}"
   end
 end

@@ -32,12 +32,12 @@
         </div>
         <div class="projects_card__links">
           <% if pet_project.hosting.present? %>
-            <div><span>Website:</span>
+            <div><span><%= t(".website") %>:</span>
               <br>
               <a href="<%= pet_project.hosting %>" target="_blank"><%= pet_project.hosting %></a>
             </div>
           <% end %>
-          <div><span>Github:</span>
+          <div><span><%= t(".github") %>:</span>
             <% pet_project.github.split("|").each do |link| %>
               <br>
               <a href="<%= link %>" target="_blank"><%= link %></a>

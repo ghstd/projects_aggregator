@@ -28,7 +28,7 @@ module ProjectsAggregator
     # config.eager_load_paths << Rails.root.join("extras")
 
     # ===============================================
-    config.hosts << "bass-loyal-closely.ngrok-free.app"
+    # config.hosts << ENV['NGROK_URL']
     # config.active_job.queue_adapter = :sidekiq
     # ===============================================
   end

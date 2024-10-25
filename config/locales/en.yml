@@ -49,6 +49,17 @@ en:
             You can leave your comments on this page.
             Your comments will only be visible to you and the author of the website.
             <span>However, you must register to leave comments.</span>
+  pet_projects:
+    index:
+      website: "Website"
+      github: "Github"
+    show:
+      languages: "Languages"
+      libraries: "Libraries"
+      resources: "Resources"
+      links: "Links"
+      website: "Website"
+      github: "Github"
   comments:
     index:
       title: "Comments"

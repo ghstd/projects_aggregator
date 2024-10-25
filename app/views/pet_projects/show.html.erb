@@ -11,7 +11,7 @@
       </video>
     </div>
     <div class="project__languages">
-      <h3>Languages:</h3>
+      <h3><%= t(".languages") %>:</h3>
       <ul>
         <% @pet_project.languages.each do |language| %>
           <li style="<%= language_color(language) %>">
@@ -22,7 +22,7 @@
     </div>
     <% if @pet_project.libraries.present? %>
       <div class="project__libraries">
-        <h3>Libraries:</h3>
+        <h3><%= t(".libraries") %>:</h3>
         <ul>
           <% @pet_project.libraries.each do |library| %>
             <li><%= library %></li>
@@ -32,7 +32,7 @@
     <% end %>
     <% if @pet_project.resources.present? %>
       <div class="project__resources">
-        <h3>Resources:</h3>
+        <h3><%= t(".resources") %>:</h3>
         <ul>
           <% @pet_project.resources.each do |resource| %>
             <li><%= resource %></li>
@@ -40,15 +40,15 @@
         </ul>
       </div>
     <% end %>
-    <h3 class="project__links_title">Links:</h3>
+    <h3 class="project__links_title"><%= t(".links") %>:</h3>
     <div class="project__links">
       <% if @pet_project.hosting.present? %>
-        <div><span>Website:</span>
+        <div><span><%= t(".website") %>:</span>
           <br>
           <a href="<%= @pet_project.hosting %>" target="_blank"><%= @pet_project.hosting %></a>
         </div>
       <% end %>
-      <div><span>Github:</span>
+      <div><span><%= t(".github") %>:</span>
         <% @pet_project.github.split("|").each do |link| %>
           <br>
           <a href="<%= link %>" target="_blank"><%= link %></a>

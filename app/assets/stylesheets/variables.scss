@@ -45,6 +45,8 @@ $transparent_color_2: rgba(12, 3, 12, 0.2);
 	--text_color: #b9d1e9;
 	--text_color_2: var(--theme_color_7);
 	--text_shadow: var(--theme_color_7);
+	--transparent_color: rgba(0, 0, 0, 0.1);
+	--title_background_color: var(--theme_color_6);
 }
 
 [data-theme="middle"] {
@@ -67,6 +69,8 @@ $transparent_color_2: rgba(12, 3, 12, 0.2);
 	--text_color: var(--theme_color_7);
 	--text_color_2: var(--theme_color_7);
 	--text_shadow: #5f8964;
+	--transparent_color: rgba(255, 255, 255, 0.1);
+	--title_background_color: var(--transparent_color);
 }
 
 [data-theme="dark"] {
@@ -89,5 +93,7 @@ $transparent_color_2: rgba(12, 3, 12, 0.2);
 	--text_color: #bdddce;
 	--text_color_2: #bdddce;
 	--text_shadow: var(--theme_color_7);
+	--transparent_color: rgba(0, 0, 0, 0.2);
+	--title_background_color: var(--theme_color_4);
 }
 

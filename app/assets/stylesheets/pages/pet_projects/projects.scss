@@ -59,7 +59,8 @@
 			border-left: 2px solid var(--theme_color_2);
 			color: var(--text_color);
 			text-shadow: 1px 0.5px 0 var(--text_shadow);
-			background-color: $transparent_color;
+			background-color: var(--transparent_color);
+			word-break: break-all;
 		}
 	
 		&__image {
@@ -74,6 +75,14 @@
 			font-size: 1.2rem;
 			font-weight: 700;
 			color: var(--theme_color_1);
+
+			div:not(:last-child) {
+			margin: 0 0 1rem 0;
+			}
+
+			div:only-child {
+				margin: 0;
+			}
 	
 			a {
 				font-weight: 500;

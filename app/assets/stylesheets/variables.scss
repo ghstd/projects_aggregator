@@ -21,6 +21,9 @@ $flash_alert_color: $orange_color;
 $spinner_color: #932ed1;
 $spinner_background_color: $dark_color;
 
+$transparent_color: rgba(0, 0, 0, 0.1);
+$transparent_color_2: rgba(12, 3, 12, 0.2);
+
 
 [data-theme="light"] {
 	--theme_color_1: #{$light_color};
@@ -41,6 +44,7 @@ $spinner_background_color: $dark_color;
 
 	--text_color: #b9d1e9;
 	--text_color_2: var(--theme_color_7);
+	--text_shadow: var(--theme_color_7);
 }
 
 [data-theme="middle"] {
@@ -62,6 +66,7 @@ $spinner_background_color: $dark_color;
 
 	--text_color: var(--theme_color_7);
 	--text_color_2: var(--theme_color_7);
+	--text_shadow: #5f8964;
 }
 
 [data-theme="dark"] {
@@ -83,5 +88,6 @@ $spinner_background_color: $dark_color;
 
 	--text_color: #bdddce;
 	--text_color_2: #bdddce;
+	--text_shadow: var(--theme_color_7);
 }
 

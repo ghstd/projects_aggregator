@@ -70,4 +70,14 @@ module ApplicationHelper
   def append_flash
     turbo_stream.append 'flash_container', partial: 'partials/flash_messages'
   end
+
+  def language_color(language)
+    case language
+      when "ruby" then "background-color: #8b1d1e; color: #fff;"
+      when "html" then "background-color: #e34c26; color: #fff;"
+      when "css" then "background-color: #774cb9; color: #fff;"
+      when "javascript" then "background-color: #f1e05a; color: #000;"
+      when "typescript" then "background-color: #3178c6; color: #fff;"
+    end
+  end
 end

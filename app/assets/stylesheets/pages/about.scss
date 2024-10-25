@@ -6,6 +6,7 @@
 		text-align: center;
 		margin: 0 0 2.5rem 0;
 		color: var(--text_color);
+		text-shadow: 1px 0.5px 0 var(--text_shadow);
 
 		@media (max-width: $tablet) {
 			font-size: 2rem;

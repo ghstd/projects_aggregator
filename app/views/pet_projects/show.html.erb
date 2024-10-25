@@ -1,43 +1,59 @@
 <% provide :current_page_tab_title, current_page_tab_title(@pet_project.title) %>
 
-<article class="project">
+<main class="project">
   <%= link_to t("buttons.back"), previous_page_url, class: "project__button button" %>
   <h2 class="project__title"><%= @pet_project.title %></h2>
   <div class="project__body">
     <p class="project__description"><%= @pet_project.description[I18n.locale.to_s] %></p>
-    <% @pet_project.images.each do |image| %>
-      <div class="project__image">
-        <img src="<%= asset_path("projects_images/#{image}") %>" />
-      </div>
-    <% end %>
+    <div class="project__image">
+      <video width="100%" controls loop poster="<%= asset_path("projects_images/#{@pet_project.images[0]}") %>">
+        <source src="<%= @pet_project.video %>" type="video/mp4">
+      </video>
+    </div>
     <div class="project__languages">
       <h3>Languages:</h3>
       <ul>
         <% @pet_project.languages.each do |language| %>
-          <li><%= language %></li>
+          <li style="<%= language_color(language) %>">
+            <%= language %>
+          </li>
         <% end %>
       </ul>
     </div>
-    <div class="project__libraries">
-      <h3>Libraries:</h3>
-      <ul>
-        <% @pet_project.libraries.each do |library| %>
-          <li><%= library %></li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="project__resources">
-      <h3>Resources:</h3>
-      <ul>
-        <% @pet_project.resources.each do |resource| %>
-          <li><%= resource %></li>
-        <% end %>
-      </ul>
-    </div>
+    <% if @pet_project.libraries.present? %>
+      <div class="project__libraries">
+        <h3>Libraries:</h3>
+        <ul>
+          <% @pet_project.libraries.each do |library| %>
+            <li><%= library %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if @pet_project.resources.present? %>
+      <div class="project__resources">
+        <h3>Resources:</h3>
+        <ul>
+          <% @pet_project.resources.each do |resource| %>
+            <li><%= resource %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <h3 class="project__links_title">Links:</h3>
     <div class="project__links">
-      <div>Github: <a href="#"><%= @pet_project.github %></a></div>
-      <div>Hosting: <a href="#"><%= @pet_project.hosting %></a></div>
+      <% if @pet_project.hosting.present? %>
+        <div><span>Website:</span>
+          <br>
+          <a href="<%= @pet_project.hosting %>" target="_blank"><%= @pet_project.hosting %></a>
+        </div>
+      <% end %>
+      <div><span>Github:</span>
+        <% @pet_project.github.split("|").each do |link| %>
+          <br>
+          <a href="<%= link %>" target="_blank"><%= link %></a>
+        <% end %>
+      </div>
     </div>
   </div>
-</article>
+</main>

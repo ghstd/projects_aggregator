@@ -26,7 +26,7 @@ Devise.setup do |config|
   # with default "from" parameter.
 
   # '=============================================================='
-  config.mailer_sender = ENV["ADMIN_EMAIL"]
+  config.mailer_sender = ENV["PROJECT_EMAIL"]
   config.mailer = 'Devise::Mailer'
   # '=============================================================='
 

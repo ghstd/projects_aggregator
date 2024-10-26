@@ -30,6 +30,7 @@ module ProjectsAggregator
     # ===============================================
     # config.hosts << ENV['NGROK_URL']
     # config.active_job.queue_adapter = :sidekiq
+    config.hosts << "pet-projects-aggregator.onrender.com"
     config.active_record.sqlite3_production_warning=false
     # ===============================================
   end

@@ -7,6 +7,17 @@ const config = {
   outdir: path.join(process.cwd(), "app/assets/builds"),
 };
 
+// ==================================
+const copyFonts = (srcDir, destDir) => {
+  fs.mkdirSync(destDir, { recursive: true });
+  fs.readdirSync(srcDir).forEach(file => {
+    const srcFile = path.join(srcDir, file);
+    const destFile = path.join(destDir, file);
+    fs.copyFileSync(srcFile, destFile);
+  });
+};
+// ==================================
+
 const build = async (config) => {
   const result = await Bun.build(config);
 
@@ -21,6 +32,14 @@ const build = async (config) => {
       throw new AggregateError(result.logs, "Build failed");
     }
   }
+
+	// ==================================
+	copyFonts(
+    path.join(process.cwd(), "app/assets/fonts/SourceSans3"),
+    path.join(config.outdir, "fonts")
+  );
+	// ==================================
+
 };
 
 (async () => {

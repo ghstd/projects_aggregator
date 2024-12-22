@@ -6,15 +6,17 @@
 </a>
 
 ### Website:
-https://pet-projects-aggregator.onrender.com
+https://pet-projects-aggregator.pp.ua/
+https://pet-projects-aggregator.onrender.com (backup link, first load takes about 1-2 minutes)
 
 ### Description:
-This is a collection of educational projects with a short description and visualization of each one. Not all of them may be complete or working properly. The purpose of this site is to show progress and a timeline of changes. The site presents almost all projects from this GitHub account.
+This is a collection of educational projects with a short description and visualization of each one. Not all of them may be complete or working properly. The purpose of this site is to show progress and a timeline of changes.
 
 ### Resources used:
-- https://design.penpot.app/
-- https://balsamiq.cloud/
 - https://github.com/bodrovis-learning/RailsSeriesYT/tree/lesson_25/app
 - https://www.youtube.com/playlist?list=PLWlFXymvoaJ_IY53-NQKwLCkR-KkZ_44-
-- https://render.com
-- chat gpt-4o
+- https://design.penpot.app/
+- https://balsamiq.cloud/
+- https://openai.com/chatgpt/overview/
+- https://aws.amazon.com/
+- https://nic.ua/

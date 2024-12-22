@@ -6,7 +6,7 @@
 </a>
 
 ### Website:
-https://pet-projects-aggregator.pp.ua/
+https://pet-projects-aggregator.pp.ua/  
 https://pet-projects-aggregator.onrender.com (backup link, first load takes about 1-2 minutes)
 
 ### Description:

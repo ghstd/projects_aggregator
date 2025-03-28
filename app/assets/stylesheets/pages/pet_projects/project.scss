@@ -73,7 +73,7 @@
 		@media (max-width: $small_screen) {
 			max-width: 80%;
 		}
-	
+
 		@media (max-width: $mobile) {
 			max-width: 100%;
 			padding: 1rem;
@@ -87,11 +87,12 @@
 		color: var(--text_color);
 		text-shadow: 1px 0.5px 0 var(--text_shadow);
 		word-break: break-all;
+		white-space: pre-wrap;
 	}
 
 	&__image {
 		margin: 0 0 2rem 0;
-    border: 5px solid var(--theme_color_4);
+		border: 5px solid var(--theme_color_4);
 		border-radius: 15px;
 
 		video {
@@ -134,7 +135,7 @@
 		h3 {
 			margin: 0 0 1rem 0;
 		}
-		
+
 		ul {
 			display: block;
 			list-style: disc;

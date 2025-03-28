@@ -14,6 +14,15 @@ threads min_threads_count, max_threads_count
 rails_env = ENV.fetch("RAILS_ENV") { "development" }
 
 if rails_env == "production"
+
+  # ===============
+  ssl_bind '0.0.0.0', '443', {
+    key: '/etc/letsencrypt/live/pet-projects-aggregator.pp.ua/privkey.pem',
+    cert: '/etc/letsencrypt/live/pet-projects-aggregator.pp.ua/cert.pem',
+    ca: '/etc/letsencrypt/live/pet-projects-aggregator.pp.ua/chain.pem'
+  }
+  # ===============
+
   # If you are running more than 1 thread per process, the workers count
   # should be equal to the number of processors (CPU cores) in production.
   #

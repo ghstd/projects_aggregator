@@ -53,7 +53,6 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 
   gem "faker", "~> 3.4"
-  gem 'dotenv-rails', '~> 3.1'
 end
 
 group :development do
@@ -87,3 +86,5 @@ gem "omniauth-google-oauth2", "~> 1.2"
 gem "pundit", "~> 2.4"
 
 gem "sidekiq", "~> 7.3"
+
+gem 'dotenv-rails', '~> 3.1'

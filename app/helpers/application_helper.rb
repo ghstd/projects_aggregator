@@ -3,7 +3,7 @@ module ApplicationHelper
 
   def current_page_tab_title(page_title)
     base_title = ENV["APP_NAME"]
-    if page_title.present?
+    if page_title.present?	
       page_title + " | " + base_title
     else
       base_title
